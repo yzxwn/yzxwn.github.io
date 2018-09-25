@@ -1,0 +1,26 @@
+{
+  "name": "yzxwn.github.io",
+  "version": "1.0.0",
+  "description": "主页",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bookIns": "gitbook install",
+    "bookBuild": "gitbook build && xcopy/Y _book /e",
+    "bookStart": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzxwn/yzxwn.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yzxwn/yzxwn.github.io/issues"
+  },
+  "homepage": "https://github.com/yzxwn/yzxwn.github.io#readme",
+  "dependencies": {
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-changyan": "^1.2.4"
+  }
+}

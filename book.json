@@ -1,0 +1,14 @@
+{
+  "title": "yzxwn",
+  "author" : "一只小蜗牛",
+  "description": "电子书",
+  "root": "./",
+  "plugins": ["expandable-chapters", "changyan", "back-to-top-button"],
+  "pluginsConfig": {
+    "expandable-chapters":{},
+    "changyan": {
+      "appid": "your changyan's appid",
+      "conf": "the conf in the code generate by changyan"
+    }
+  }
+}
