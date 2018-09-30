@@ -22,10 +22,3 @@ gitbook serve //在4000端口
 报错：将.gitbook\versions\3.2.3\lib\output\website\copyPluginAssets.js文件112行confirm设为false
 gitbook build
 ```
-
-标题
----
-```js
-var a = 1;
-var a = 1;
-```
