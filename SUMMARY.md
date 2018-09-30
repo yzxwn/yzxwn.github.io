@@ -12,11 +12,11 @@
     * [前端规范](doc/note/n1.md)
 
 * Javascript
-    * [js技巧](doc/Javascript/j1.md)
-    * [js基础](doc/Javascript/j2.md)
-    * [HTML DOM](doc/Javascript/j3.md)
-    * [js对象](doc/Javascript/j4.md)
-    * [js Window](doc/Javascript/j5.md)
+    * [js技巧](doc/JavaScript/j1.md)
+    * [js基础](doc/JavaScript/j2.md)
+    * [HTML DOM](doc/JavaScript/j3.md)
+    * [js对象](doc/JavaScript/j4.md)
+    * [js Window](doc/JavaScript/j5.md)
 
 * Es6
     * [es6总结](doc/Es6/e1.md)
