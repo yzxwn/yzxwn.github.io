@@ -1,0 +1,908 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>htmlDom对象 · yzxwn</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="一只小蜗牛">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="javascript对象.html" />
+    
+    
+    <link rel="prev" href="js基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">一只小蜗牛</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../href/参考链接.html">
+            
+                <a href="../href/参考链接.html">
+            
+                    
+                    参考链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../href/技术背景.html">
+            
+                <a href="../href/技术背景.html">
+            
+                    
+                    技术背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../note/前端规范.html">
+            
+                <a href="../note/前端规范.html">
+            
+                    
+                    前端规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Javascript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="js技巧.html">
+            
+                <a href="js技巧.html">
+            
+                    
+                    js技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="js基础.html">
+            
+                <a href="js基础.html">
+            
+                    
+                    js基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="htmlDom对象.html">
+            
+                <a href="htmlDom对象.html">
+            
+                    
+                    htmlDom对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="javascript对象.html">
+            
+                <a href="javascript对象.html">
+            
+                    
+                    javascript对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="browser对象.html">
+            
+                <a href="browser对象.html">
+            
+                    
+                    browser对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Es6
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Es6/e1.html">
+            
+                <a href="../Es6/e1.html">
+            
+                    
+                    es6总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    css
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../css/c1.html">
+            
+                <a href="../css/c1.html">
+            
+                    
+                    css技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    React
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../react/r1.html">
+            
+                <a href="../react/r1.html">
+            
+                    
+                    JSX深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Typescript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../typescript/t1.html">
+            
+                <a href="../typescript/t1.html">
+            
+                    
+                    TS Eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../other/心迹.html">
+            
+                <a href="../other/心迹.html">
+            
+                    
+                    心迹
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://blog.csdn.net/u012067966/article/details/50736647">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >htmlDom对象</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="htmldom&#x5BF9;&#x8C61;">htmlDom&#x5BF9;&#x8C61;</h2>
+<p><a href="#document&#xFF1A;&#x6BCF;&#x4E2A;&#x8F7D;&#x5165;&#x6D4F;&#x89C8;&#x5668;&#x7684;html&#x6587;&#x6863;&#x90FD;&#x4F1A;&#x6210;&#x4E3A;document&#x5BF9;&#x8C61;">Document</a>&#x3001;
+<a href="#element&#xFF1A;&#x8868;&#x793A;html&#x5143;&#x7D20;">Element</a>&#x3001;
+<a href="#attribute&#xFF1A;&#x8868;&#x793A;html&#x5C5E;&#x6027;">Attribute</a>&#x3001;
+<a href="#event&#xFF1A;&#x4EE3;&#x8868;&#x4E8B;&#x4EF6;&#x7684;&#x72B6;&#x6001;">Event</a></p>
+<h4 id="document&#xFF1A;&#x6BCF;&#x4E2A;&#x8F7D;&#x5165;&#x6D4F;&#x89C8;&#x5668;&#x7684;html&#x6587;&#x6863;&#x90FD;&#x4F1A;&#x6210;&#x4E3A;document&#x5BF9;&#x8C61;">Document&#xFF1A;&#x6BCF;&#x4E2A;&#x8F7D;&#x5165;&#x6D4F;&#x89C8;&#x5668;&#x7684;HTML&#x6587;&#x6863;&#x90FD;&#x4F1A;&#x6210;&#x4E3A;Document&#x5BF9;&#x8C61;</h4>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x96C6;&#x5408;:<ul>
+<li><strong>all[i]|all[name]|all.tags[tagname]</strong>&#xFF1A;&#x63D0;&#x4F9B;&#x5BF9;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709; HTML &#x5143;&#x7D20;&#x7684;&#x8BBF;&#x95EE;</li>
+<li><strong>anchors[]</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709; Anchor(&#x951A;) &#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;</li>
+<li><strong>applets</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709; Applet &#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;</li>
+<li><strong>forms[]</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709; Form(&#x8868;&#x5355;) &#x5BF9;&#x8C61;&#x5F15;&#x7528;</li>
+<li><strong>images[]</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709; Image &#x5BF9;&#x8C61;&#x5F15;&#x7528;</li>
+<li><strong>links[]</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709; Area(&#x70ED;&#x70B9;) &#x548C; Link &#x5BF9;&#x8C61;&#x5F15;&#x7528;</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x8C61;&#x5C5E;&#x6027;:<ul>
+<li><strong>body</strong>&#xFF1A;&#x63D0;&#x4F9B;&#x5BF9; <body> &#x5143;&#x7D20;&#x7684;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x3002;&#x5BF9;&#x4E8E;&#x5B9A;&#x4E49;&#x4E86;&#x6846;&#x67B6;&#x96C6;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x5F15;&#x7528;&#x6700;&#x5916;&#x5C42;&#x7684; <frameset></frameset></body></li>
+<li><strong>cookie</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x4E0E;&#x5F53;&#x524D;&#x6587;&#x6863;&#x6709;&#x5173;&#x7684;&#x6240;&#x6709; cookie</li>
+<li><strong>domain</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6587;&#x6863;&#x7684;&#x57DF;&#x540D;</li>
+<li><strong>lastModified</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x6587;&#x6863;&#x88AB;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</li>
+<li><strong>referrer</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x8F7D;&#x5165;&#x5F53;&#x524D;&#x6587;&#x6863;&#x7684;&#x6587;&#x6863;&#x7684; URL</li>
+<li><strong>title</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6587;&#x6863;&#x7684;&#x6807;&#x9898;</li>
+<li><strong>URL</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6587;&#x6863;&#x7684; URL</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;:<ul>
+<li><strong>open(mimetype,replace)</strong>&#xFF1A;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6D41;&#xFF0C;&#x4EE5;&#x6536;&#x96C6;&#x6765;&#x81EA;&#x4EFB;&#x4F55; document.write() &#x6216; document.writeln() &#x65B9;&#x6CD5;&#x7684;&#x8F93;&#x51FA;</li>
+<li><strong>close()</strong>&#xFF1A;&#x5173;&#x95ED;&#x7528; document.open() &#x65B9;&#x6CD5;&#x6253;&#x5F00;&#x7684;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x9009;&#x5B9A;&#x7684;&#x6570;&#x636E;</li>
+<li><strong>write(exp1,exp2,exp3,....)</strong>&#xFF1A;&#x5411;&#x6587;&#x6863;&#x5199; HTML &#x8868;&#x8FBE;&#x5F0F; &#x6216; JavaScript &#x4EE3;&#x7801;</li>
+<li><strong>writeln(exp1,exp2,exp3,....)</strong>&#xFF1A;&#x7B49;&#x540C;&#x4E8E; write() &#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x5728;&#x6BCF;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x4E4B;&#x540E;&#x5199;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;</li>
+<li><strong>getElementById()</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5BF9;&#x62E5;&#x6709;&#x6307;&#x5B9A; id &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;</li>
+<li><strong>getElementsByName()</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5E26;&#x6709;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x5BF9;&#x8C61;&#x96C6;&#x5408;</li>
+<li><strong>getElementsByTagName()</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5E26;&#x6709;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x540D;&#x7684;&#x5BF9;&#x8C61;&#x96C6;&#x5408;</li>
+</ul>
+</li>
+</ul>
+<h4 id="element&#xFF1A;&#x8868;&#x793A;html&#x5143;&#x7D20;">Element&#xFF1A;&#x8868;&#x793A;HTML&#x5143;&#x7D20;</h4>
+<ul>
+<li><p>&#x5BF9;&#x8C61;&#x5C5E;&#x6027;:</p>
+<ul>
+<li><strong>attributes</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x5C5E;&#x6027;&#x7684; NamedNodeMap(&#x5C5E;&#x6027;&#x96C6;&#x5408;)</li>
+<li><strong>style</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684; style &#x5C5E;&#x6027;</li>
+<li><strong>className</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684; class &#x5C5E;&#x6027;(&#x8FD4;&#x56DE;class&#x5B57;&#x7B26;&#x4E32;)</li>
+<li><strong>id</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684; id</li>
+<li><strong>innerHTML</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;</li>
+<li><strong>tagName</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6807;&#x7B7E;&#x540D;&#xFF08;&#x5927;&#x5199;&#xFF09;</li>
+<li><strong>title</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684; title &#x5C5E;&#x6027;</li>
+<li><strong>ownerDocument</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6839;&#x5143;&#x7D20;&#xFF08;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#xFF09;</li>
+<li><strong>length</strong>&#xFF1A;&#x8FD4;&#x56DE; NodeList &#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;</li>
+<li><strong>childNodes</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x5B50;&#x8282;&#x70B9;&#x7684; NodeList(&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x88AB;&#x89C6;&#x4E3A;&#x6587;&#x672C;&#xFF0C;#text&#x8282;&#x70B9;)</li>
+<li><strong>firstChild</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x9996;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</li>
+<li><strong>lastChild</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</li>
+<li><strong>nextSibling</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x4F4D;&#x4E8E;&#x76F8;&#x540C;&#x8282;&#x70B9;&#x6811;&#x5C42;&#x7EA7;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;(&#x7A7A;&#x683C;&#x8FD4;&#x56DE;undefined)</li>
+<li><strong>previousSibling</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x4F4D;&#x4E8E;&#x76F8;&#x540C;&#x8282;&#x70B9;&#x6811;&#x5C42;&#x7EA7;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</li>
+<li><strong>parentNode</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x7236;&#x8282;&#x70B9;</li>
+<li><strong>nodeName</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF1A;&#x8FD4;&#x56DE;&#x5927;&#x5199;&#x6807;&#x7B7E;&#x540D;&#xFF0C;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF1A;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#xFF09;</li>
+<li><strong>nodeType</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x8282;&#x70B9;&#x7C7B;&#x578B;&#xFF08;&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF1A;&#x8FD4;&#x56DE; 1&#xFF0C;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF1A;&#x8FD4;&#x56DE; 2&#xFF0C;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF1A;&#x8FD4;&#x56DE; 3&#xFF09;</li>
+<li><strong>nodeValue</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x503C;</li>
+<li><strong>textContent</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x53CA;&#x5176;&#x540E;&#x4EE3;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#xFF08;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; textContent &#x5C5E;&#x6027;&#xFF0C;&#x4F1A;&#x5220;&#x9664;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x88AB;&#x66FF;&#x6362;&#x4E3A;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF09;</li>
+<li><strong>contentEditable</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x53EF;&#x7F16;&#x8F91;(boolean&#xFF0C;&#x53EF;&#x4ECE;&#x7236;&#x5143;&#x7D20;&#x7EE7;&#x627F;)</li>
+<li><strong>isContentEditable</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x53EF;&#x7F16;&#x8F91;</li>
+<li><strong>dir</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x65B9;&#x5411;&#xFF08;text-direction&#xFF09;</li>
+<li><strong>clientHeight|clientWidth</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x53EF;&#x89C1;&#x9AD8;&#x5EA6;|&#x5BBD;&#x5EA6;</li>
+<li><strong>offsetHeight|offsetWidth</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x9AD8;&#x5EA6;|&#x5BBD;&#x5EA6;</li>
+<li><strong>offsetLeft|offsetTop</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6C34;&#x5E73;|&#x5782;&#x76F4;&#x504F;&#x79FB;&#x4F4D;&#x7F6E;</li>
+<li><strong>offsetParent</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x504F;&#x79FB;&#x5BB9;&#x5668;</li>
+<li><strong>scrollHeight|scrollWidth</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6574;&#x4F53;&#x9AD8;&#x5EA6;|&#x5BBD;&#x5EA6;</li>
+<li><strong>scrollLeft|scrollTop</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x5DE6;|&#x4E0A;&#x8FB9;&#x7F18;&#x4E0E;&#x89C6;&#x56FE;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;</li>
+<li><strong>tabIndex</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684; tab &#x952E;&#x63A7;&#x5236;&#x6B21;&#x5E8F;</li>
+<li><p><strong>accessKey</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x5FEB;&#x6377;&#x952E;</p>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x5FEB;&#x6377;&#x952E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5404;&#x6709;&#x4E0D;&#x540C;&#xFF1A;</span>
+IE, Chrome, Safari, Opera <span class="hljs-number">15</span>+: [ALT] + accesskey
+Opera prior version <span class="hljs-number">15</span>: [SHIFT] [ESC] + accesskey
+Firefox: [ALT] [SHIFT] + accesskey
+<span class="hljs-comment">//&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5FEB;&#x6377;&#x952E;&#xFF0C;&#x90A3;&#x4E48;&#xFF1A;</span>
+IE, Firefox: &#x6FC0;&#x6D3B;&#x4E0B;&#x4E00;&#x4E2A;&#x88AB;&#x6309;&#x4E0B;&#x5FEB;&#x6377;&#x952E;&#x7684;&#x5143;&#x7D20;
+Chrome, Safari: &#x6FC0;&#x6D3B;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x88AB;&#x6309;&#x4E0B;&#x5FEB;&#x6377;&#x952E;&#x7684;&#x5143;&#x7D20;
+Opera: &#x6FC0;&#x6D3B;&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x6309;&#x4E0B;&#x5FEB;&#x6377;&#x952E;&#x7684;&#x5143;&#x7D20;
+
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;w3s&apos;</span>).accessKey=<span class="hljs-string">&quot;m&quot;</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;w3s&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.w3school.com.cn/&quot;</span>&gt;</span>W3School<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+===
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;w3s&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.w3school.com.cn/&quot;</span> <span class="hljs-attr">accesskey</span>=<span class="hljs-string">&quot;m&quot;</span>&gt;</span>W3School<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+</code></pre>
+</li>
+<li><strong>lang</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#xFF08;language-code&#xFF09;</li>
+<li><strong>namespaceURI</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684; URI</li>
+</ul>
+</li>
+<li><p>&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;:</p>
+<ul>
+<li><strong>appendChild(newListItem)</strong>&#xFF1A;&#x5411;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x4F5C;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF08;&#x53EF;&#x4EE5;&#x63D2;&#x5165;/&#x79FB;&#x52A8;&#x5DF2;&#x6709;&#x5143;&#x7D20;&#xFF09;</li>
+<li><strong>insertBefore(newnode,existingnode)</strong>&#xFF1A;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x5DF2;&#x6709;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x63D2;&#x5165;&#x65B0;&#x8282;&#x70B9;&#xFF08;&#x53EF;&#x4EE5;&#x63D2;&#x5165;/&#x79FB;&#x52A8;&#x5DF2;&#x6709;&#x5143;&#x7D20;&#xFF09;</li>
+<li><strong>removeChild(node)</strong>&#xFF1A;&#x4ECE;&#x5143;&#x7D20;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8282;&#x70B9;</li>
+<li><strong>replaceChild(newnode,oldnode)</strong>&#xFF1A;&#x66FF;&#x6362;&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x5B50;&#x8282;&#x70B9;&#xFF08;&#x65B0;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x662F;&#x6587;&#x6863;&#x4E2D;&#x67D0;&#x4E2A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x8282;&#x70B9;&#x79FB;&#x52A8;&#xFF0C;&#x4E5F;&#x53EF;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x8282;&#x70B9;&#xFF09;</li>
+<li><strong>cloneNode(deep)</strong>&#xFF1A;&#x514B;&#x9686;&#x5143;&#x7D20;&#xFF08;&#x521B;&#x5EFA;&#x8282;&#x70B9;&#x7684;&#x62F7;&#x8D1D;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x526F;&#x672C;&#xFF0C;deep&#xFF1A;boolean&#x514B;&#x9686;&#x6240;&#x6709;&#x540E;&#x4EE3;&#xFF09;</li>
+<li><strong>getAttribute(attributename)</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x503C;</li>
+<li><strong>getAttributeNode(attributename)</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;(Attr &#x5BF9;&#x8C61;)</li>
+<li><strong>removeAttribute(attributename)</strong>&#xFF1A;&#x4ECE;&#x5143;&#x7D20;&#x4E2D;&#x79FB;&#x9664;&#x6307;&#x5B9A;&#x5C5E;&#x6027;</li>
+<li><strong>removeAttributeNode(attributename)</strong>&#xFF1A;&#x79FB;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x88AB;&#x79FB;&#x9664;&#x7684;&#x8282;&#x70B9;</li>
+<li><strong>getElementsByTagName(tagname)</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x62E5;&#x6709;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x540D;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x96C6;&#x5408;(&#x53C2;&#x6570;&#x503C; &quot;*&quot; &#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;)</li>
+<li><strong>hasAttribute(attributename)</strong>&#xFF1A;&#x5982;&#x679C;&#x5143;&#x7D20;&#x62E5;&#x6709;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false</li>
+<li><strong>hasAttributes()</strong>&#xFF1A;&#x5982;&#x679C;&#x5143;&#x7D20;&#x62E5;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false</li>
+<li><strong>hasChildNodes()</strong>&#xFF1A;&#x5982;&#x679C;&#x5143;&#x7D20;&#x62E5;&#x6709;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219; false</li>
+<li><strong>setAttribute(attributename,attributevalue)</strong>&#xFF1A;&#x628A;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x6216;&#x66F4;&#x6539;&#x4E3A;&#x6307;&#x5B9A;&#x503C;</li>
+<li><strong>setAttributeNode(attributenode)</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x66F4;&#x6539;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x8282;&#x70B9;<pre><code class="lang-js"><span class="hljs-keyword">var</span> atr=<span class="hljs-built_in">document</span>.createAttribute(<span class="hljs-string">&quot;class&quot;</span>);
+atr.nodeValue=<span class="hljs-string">&quot;democlass&quot;</span>;
+<span class="hljs-keyword">var</span> h=<span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&quot;H1&quot;</span>)[<span class="hljs-number">0</span>];
+h.setAttributeNode(atr); <span class="hljs-comment">//&#x7ED9;h&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x7C7B;&#x540D;&#xFF1A;democlass</span>
+</code></pre>
+</li>
+<li><strong>isEqualNode(node)</strong>&#xFF1A;&#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x5426;&#x76F8;&#x7B49;<pre><code>&#x5982;&#x679C;&#x4E0B;&#x4F8B;&#x6761;&#x4EF6;&#x4E3A; true&#xFF0C;&#x5219;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x76F8;&#x7B49;&#xFF1A;
+&#x8282;&#x70B9;&#x7C7B;&#x578B;&#x76F8;&#x540C;
+&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684; nodeName&#x3001;NodeValue&#x3001;localName&#x3001;nameSpaceURI &#x4EE5;&#x53CA;&#x524D;&#x7F00;
+&#x6240;&#x6709;&#x540E;&#x4EE3;&#x5747;&#x4E3A;&#x76F8;&#x540C;&#x7684;&#x5B50;&#x8282;&#x70B9;
+&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x5C5E;&#x6027;&#x6B21;&#x5E8F;&#x4E0D;&#x5FC5;&#x4E00;&#x81F4;&#xFF09;
+</code></pre></li>
+<li><strong>isSameNode(node)</strong>&#xFF1A;&#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x5426;&#x662F;&#x76F8;&#x540C;&#x7684;&#x8282;&#x70B9;<pre><code>Firefox &#x7248;&#x672C; 10 &#x505C;&#x6B62;&#x5BF9;&#x6B64;&#x65B9;&#x6CD5;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x56E0;&#x4E3A; DOM version 4 &#x4E2D;&#x5DF2;&#x5F03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;
+&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;&#xFF0C;&#x4F7F;&#x7528; === &#x6765;&#x6BD4;&#x8F83;&#x4E24;&#x8282;&#x70B9;&#x662F;&#x5426;&#x76F8;&#x540C;
+</code></pre></li>
+<li><strong>normalize()</strong>&#xFF1A;&#x5408;&#x5E76;&#x5143;&#x7D20;&#x4E2D;&#x76F8;&#x90BB;&#x7684;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x79FB;&#x9664;&#x7A7A;&#x7684;&#x6587;&#x672C;&#x8282;&#x70B9;</li>
+<li><strong>item(index)</strong>&#xFF1A;&#x8FD4;&#x56DE; NodeList &#x4E2D;&#x4F4D;&#x4E8E;&#x6307;&#x5B9A;&#x4E0B;&#x6807;&#x7684;&#x8282;&#x70B9;&#xFF08;childNodes.item(0) === childNodes[0]&#xFF09;</li>
+<li><strong>toString()</strong>&#xFF1A;&#x628A;&#x5143;&#x7D20;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</li>
+<li><p><strong>compareDocumentPosition()</strong>&#xFF1A;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6587;&#x6863;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-js">p1.compareDocumentPosition(p2);
+
+&#x8FD4;&#x56DE;&#x503C;&#x53EF;&#x80FD;&#x662F;&#xFF1A;
+<span class="hljs-number">1</span>&#xFF1A;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#xFF0C;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x4E0D;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x3002;
+<span class="hljs-number">2</span>&#xFF1A;&#x7B2C;&#x4E00;&#x8282;&#x70B9;&#xFF08;P1&#xFF09;&#x4F4D;&#x4E8E;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x540E;&#xFF08;P2&#xFF09;&#x3002;
+<span class="hljs-number">4</span>&#xFF1A;&#x7B2C;&#x4E00;&#x8282;&#x70B9;&#xFF08;P1&#xFF09;&#x5B9A;&#x4F4D;&#x5728;&#x7B2C;&#x4E8C;&#x8282;&#x70B9;&#xFF08;P2&#xFF09;&#x524D;&#x3002;
+<span class="hljs-number">8</span>&#xFF1A;&#x7B2C;&#x4E00;&#x8282;&#x70B9;&#xFF08;P1&#xFF09;&#x4F4D;&#x4E8E;&#x7B2C;&#x4E8C;&#x8282;&#x70B9;&#x5185;&#xFF08;P2&#xFF09;&#x3002;
+<span class="hljs-number">16</span>&#xFF1A;&#x7B2C;&#x4E8C;&#x8282;&#x70B9;&#xFF08;P2&#xFF09;&#x4F4D;&#x4E8E;&#x7B2C;&#x4E00;&#x8282;&#x70B9;&#x5185;&#xFF08;P1&#xFF09;&#x3002;
+<span class="hljs-number">32</span>&#xFF1A;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#xFF0C;&#x6216;&#x662F;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x540C;&#x4E00;&#x5143;&#x7D20;&#x7684;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x3002;
+<span class="hljs-comment">//&#x8FD4;&#x56DE;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x503C;&#x7684;&#x7EC4;&#x5408;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8FD4;&#x56DE; 20 &#x610F;&#x5473;&#x7740;&#x5728; p2 &#x5728; p1 &#x5185;&#x90E8;&#xFF08;16&#xFF09;&#xFF0C;&#x5E76;&#x4E14; p1 &#x5728; p2 &#x4E4B;&#x524D;&#xFF08;4&#xFF09;</span>
+</code></pre>
+</li>
+<li><strong>isSupported(feature,version)</strong>&#xFF1A;&#x5982;&#x679C;&#x5143;&#x7D20;&#x652F;&#x6301;&#x6307;&#x5B9A;&#x7279;&#x6027;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true</li>
+<li><strong>isDefaultNamespace()</strong>&#xFF1A;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684; namespaceURI &#x662F;&#x9ED8;&#x8BA4;&#x7684;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false</li>
+<li><strong>getFeature()</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5B9E;&#x73B0;&#x4E86;&#x6307;&#x5B9A;&#x7279;&#x6027;&#x7684; API &#x7684;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;</li>
+<li><strong>getUserData()</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5173;&#x8054;&#x5143;&#x7D20;&#x4E0A;&#x952E;&#x7684;&#x5BF9;&#x8C61;</li>
+<li><strong>setIdAttribute()</strong>&#xFF1A;</li>
+<li><strong>setIdAttributeNode()</strong>&#xFF1A;</li>
+<li><strong>setUserData()</strong>&#xFF1A;&#x628A;&#x5BF9;&#x8C61;&#x5173;&#x8054;&#x5230;&#x5143;&#x7D20;&#x4E0A;&#x7684;&#x952E;</li>
+</ul>
+</li>
+</ul>
+<h4 id="attribute&#xFF1A;&#x8868;&#x793A;html&#x5C5E;&#x6027;">Attribute&#xFF1A;&#x8868;&#x793A;HTML&#x5C5E;&#x6027;</h4>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x5C5E;&#x6027;:<ul>
+<li><strong>attr.isId</strong>&#xFF1A;&#x5982;&#x679C;&#x5C5E;&#x6027;&#x662F; id &#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false</li>
+<li><strong>attr.name</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;</li>
+<li><strong>attr.value</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x7684;&#x503C;</li>
+<li><strong>attr.specified</strong>&#xFF1A;&#x5982;&#x679C;&#x5DF2;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false</li>
+<li><strong>nodemap.length</strong>&#xFF1A;&#x8FD4;&#x56DE; NamedNodeMap &#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;:<ul>
+<li><strong>nodemap.getNamedItem(name)</strong>&#xFF1A;&#x4ECE; NamedNodeMap &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;</li>
+<li><strong>nodemap.item(index)</strong>&#xFF1A;&#x8FD4;&#x56DE; NamedNodeMap &#x4E2D;&#x4F4D;&#x4E8E;&#x6307;&#x5B9A;&#x4E0B;&#x6807;&#x7684;&#x8282;&#x70B9;</li>
+<li><strong>nodemap.removeNamedItem(nodename)</strong>&#xFF1A;&#x79FB;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;</li>
+<li><strong>nodemap.setNamedItem(node)</strong>&#xFF1A;&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF08;&#x901A;&#x8FC7;&#x540D;&#x79F0;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h4 id="event&#xFF1A;&#x4EE3;&#x8868;&#x4E8B;&#x4EF6;&#x7684;&#x72B6;&#x6001;">Event&#xFF1A;&#x4EE3;&#x8868;&#x4E8B;&#x4EF6;&#x7684;&#x72B6;&#x6001;</h4>
+<ul>
+<li><p>&#x4E8B;&#x4EF6;&#x53E5;&#x67C4;:</p>
+<ul>
+<li><strong>onload</strong>&#xFF1A;&#x4E00;&#x5F20;&#x9875;&#x9762;&#x6216;&#x4E00;&#x5E45;&#x56FE;&#x50CF;&#x5B8C;&#x6210;&#x52A0;&#x8F7D;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;body&gt;, &lt;frame&gt;, &lt;frameset&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;link&gt;, &lt;script&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+image, layer, window
+</code></pre></li>
+<li><strong>onabort</strong>&#xFF1A;&#x56FE;&#x50CF;&#x7684;&#x52A0;&#x8F7D;&#x88AB;&#x4E2D;&#x65AD;(&#x4EC5;&#x652F;&#x6301;img)</li>
+<li><strong>onerror</strong>&#xFF1A;&#x5728;&#x52A0;&#x8F7D;&#x6587;&#x6863;&#x6216;&#x56FE;&#x50CF;&#x65F6;&#x53D1;&#x751F;&#x9519;&#x8BEF;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;img&gt;, &lt;object&gt;, &lt;style&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+image, window
+</code></pre></li>
+<li><strong>onunload</strong>&#xFF1A;&#x7528;&#x6237;&#x9000;&#x51FA;&#x9875;&#x9762;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;body&gt;, &lt;frameset&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+window
+</code></pre></li>
+<li><strong>onfocus</strong>&#xFF1A;&#x5143;&#x7D20;&#x83B7;&#x5F97;&#x7126;&#x70B9;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;acronym&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;button&gt;,
+&lt;caption&gt;, &lt;cite&gt;, &lt;dd&gt;, &lt;del&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;fieldset&gt;,
+&lt;form&gt;, &lt;frame&gt;, &lt;frameset&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input&gt;,
+&lt;ins&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;, &lt;li&gt;, &lt;object&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;q&gt;,
+&lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;, &lt;tbody&gt;,
+&lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;, &lt;th&gt;, &lt;thead&gt;, &lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+button, checkbox, fileUpload, layer, frame, password, radio, reset, select, submit,
+text, textarea, window
+</code></pre></li>
+<li><strong>onblur</strong>&#xFF1A;&#x5143;&#x7D20;&#x5931;&#x53BB;&#x7126;&#x70B9;(&#x4E0E;onfocus&#x76F8;&#x540C;)</li>
+<li><strong>onchange</strong>&#xFF1A;&#x57DF;&#x7684;&#x5185;&#x5BB9;&#x88AB;&#x6539;&#x53D8;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+fileUpload, select, text, textarea
+</code></pre></li>
+<li><strong>onselect</strong>&#xFF1A;&#x6587;&#x672C;&#x88AB;&#x9009;&#x4E2D;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;input&gt;, &lt;textarea&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+window
+</code></pre></li>
+<li><strong>onclick</strong>&#xFF1A;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x4E8B;&#x4EF6;&#x53E5;&#x67C4;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;button&gt;,
+&lt;caption&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dd&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;fieldset&gt;,
+&lt;form&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;,
+&lt;li&gt;, &lt;map&gt;, &lt;object&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;,
+&lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;, &lt;tbody&gt;, &lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;, &lt;th&gt;,
+&lt;thead&gt;, &lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+button, document, checkbox, link, radio, reset, submit
+</code></pre></li>
+<li><strong>ondblclick</strong>&#xFF1A;&#x5F53;&#x7528;&#x6237;&#x53CC;&#x51FB;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x4E8B;&#x4EF6;&#x53E5;&#x67C4;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;,
+&lt;button&gt;, &lt;caption&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dd&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;,
+&lt;em&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;,
+&lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;, &lt;li&gt;, &lt;map&gt;, &lt;object&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;,
+&lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;,
+&lt;tbody&gt;, &lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;, &lt;th&gt;, &lt;thead&gt;, &lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+document, link
+</code></pre></li>
+<li><p><strong>onkeydown</strong>&#xFF1A;&#x67D0;&#x4E2A;&#x952E;&#x76D8;&#x6309;&#x952E;&#x88AB;&#x6309;&#x4E0B;</p>
+<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;acronym&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;,
+&lt;button&gt;, &lt;caption&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dd&gt;, &lt;del&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dt&gt;, &lt;em&gt;,
+&lt;fieldset&gt;, &lt;form&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;,
+&lt;li&gt;, &lt;map&gt;, &lt;object&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;q&gt;, &lt;samp&gt;, &lt;select&gt;, &lt;small&gt;,
+&lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;, &lt;tbody&gt;, &lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;,
+&lt;th&gt;, &lt;thead&gt;, &lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+document, image, link, textarea
+
+Internet Explorer &#x4F7F;&#x7528; event.keyCode &#x53D6;&#x56DE;&#x88AB;&#x6309;&#x4E0B;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x800C; Netscape/Firefox/Opera &#x4F7F;&#x7528; event.which
+</code></pre></li>
+<li><strong>onkeypress</strong>&#xFF1A;&#x67D0;&#x4E2A;&#x952E;&#x76D8;&#x6309;&#x952E;&#x88AB;&#x6309;&#x4E0B;&#x5E76;&#x677E;&#x5F00;(&#x4E0E;onkeydown&#x76F8;&#x540C;)</li>
+<li><strong>onkeyup</strong>&#xFF1A;&#x67D0;&#x4E2A;&#x952E;&#x76D8;&#x6309;&#x952E;&#x88AB;&#x677E;&#x5F00;(&#x4E0E;onkeydown&#x76F8;&#x540C;)</li>
+<li><strong>onmousedown</strong>&#xFF1A;&#x9F20;&#x6807;&#x6309;&#x94AE;&#x88AB;&#x6309;&#x4E0B;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;button&gt;,
+&lt;caption&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dd&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;fieldset&gt;,
+&lt;form&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;,
+&lt;li&gt;, &lt;map&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;,
+&lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;, &lt;tbody&gt;, &lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;, &lt;th&gt;, &lt;thead&gt;,
+&lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+button, document, link
+</code></pre></li>
+<li><strong>onmouseup</strong>&#xFF1A;&#x9F20;&#x6807;&#x6309;&#x952E;&#x88AB;&#x677E;&#x5F00;(&#x4E0E;onmousedown&#x76F8;&#x540C;)</li>
+<li><strong>onmousemove</strong>&#xFF1A;&#x9F20;&#x6807;&#x88AB;&#x79FB;&#x52A8;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;button&gt;,
+&lt;caption&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dd&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;fieldset&gt;,
+&lt;form&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;,
+&lt;li&gt;, &lt;map&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;,
+&lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;, &lt;tbody&gt;, &lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;, &lt;th&gt;, &lt;thead&gt;,
+&lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+onmousemove is, by default, not an event of any object,
+because mouse movement happens very frequently
+</code></pre></li>
+<li><strong>onmouseover</strong>&#xFF1A;&#x9F20;&#x6807;&#x79FB;&#x5230;&#x67D0;&#x5143;&#x7D20;&#x4E4B;&#x4E0A;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;address&gt;, &lt;area&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;button&gt;,
+&lt;caption&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dd&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;fieldset&gt;,
+&lt;form&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;hr&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;,
+&lt;li&gt;, &lt;map&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;,
+&lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;, &lt;tbody&gt;, &lt;td&gt;, &lt;textarea&gt;, &lt;tfoot&gt;, &lt;th&gt;, &lt;thead&gt;,
+&lt;tr&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+layer, link
+</code></pre></li>
+<li><strong>onmouseout</strong>&#xFF1A;&#x9F20;&#x6807;&#x4ECE;&#x67D0;&#x5143;&#x7D20;&#x79FB;&#x5F00;(&#x4E0E;onmouseover&#x76F8;&#x540C;)</li>
+<li><strong>onsubmit</strong>&#xFF1A;&#x786E;&#x8BA4;&#x6309;&#x94AE;&#x88AB;&#x70B9;&#x51FB;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;form&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+form
+</code></pre></li>
+<li><strong>onreset</strong>&#xFF1A;&#x91CD;&#x7F6E;&#x6309;&#x94AE;&#x88AB;&#x70B9;&#x51FB;(&#x4E0E;onsubmit&#x76F8;&#x540C;)</li>
+<li><strong>onresize</strong>&#xFF1A;&#x7A97;&#x53E3;&#x6216;&#x6846;&#x67B6;&#x88AB;&#x91CD;&#x65B0;&#x8C03;&#x6574;&#x5927;&#x5C0F;<pre><code>&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; HTML &#x6807;&#x7B7E;&#xFF1A;
+&lt;a&gt;, &lt;address&gt;, &lt;b&gt;, &lt;big&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;button&gt;, &lt;cite&gt;, &lt;code&gt;,
+&lt;dd&gt;, &lt;dfn&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;frame&gt;, &lt;h1&gt; to &lt;h6&gt;,
+&lt;hr&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;legend&gt;, &lt;li&gt;, &lt;object&gt;, &lt;ol&gt;, &lt;p&gt;,
+&lt;pre&gt;, &lt;samp&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;table&gt;,
+&lt;textarea&gt;, &lt;tt&gt;, &lt;ul&gt;, &lt;var&gt;
+&#x652F;&#x6301;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF1A;
+window
+</code></pre></li>
+</ul>
+</li>
+<li>&#x9F20;&#x6807; / &#x952E;&#x76D8;&#x5C5E;&#x6027;:<ul>
+<li><strong>altKey</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&quot;ALT&quot; &#x662F;&#x5426;&#x88AB;&#x6309;&#x4E0B;<pre><code class="lang-js">event.altKey=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>|<span class="hljs-number">1</span>|<span class="hljs-number">0</span>
+</code></pre>
+</li>
+<li><strong>ctrlKey</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&quot;CTRL&quot; &#x952E;&#x662F;&#x5426;&#x88AB;&#x6309;&#x4E0B;<pre><code class="lang-js">event.ctrlKey=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>|<span class="hljs-number">1</span>|<span class="hljs-number">0</span>
+</code></pre>
+</li>
+<li><strong>shiftKey</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&quot;SHIFT&quot; &#x952E;&#x662F;&#x5426;&#x88AB;&#x6309;&#x4E0B;<pre><code class="lang-js">event.shiftKey=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>|<span class="hljs-number">1</span>|<span class="hljs-number">0</span>
+</code></pre>
+</li>
+<li><strong>metaKey</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&quot;meta&quot; &#x952E;&#x662F;&#x5426;&#x88AB;&#x6309;&#x4E0B;</li>
+<li><strong>button</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&#x54EA;&#x4E2A;&#x9F20;&#x6807;&#x6309;&#x94AE;&#x88AB;&#x70B9;&#x51FB;<pre><code class="lang-js">event.button=<span class="hljs-number">0</span>|<span class="hljs-number">1</span>|<span class="hljs-number">2</span> <span class="hljs-comment">//&#x5DE6;&#x952E;|&#x4E2D;&#x952E;|&#x53F3;&#x952E;</span>
+event.button=<span class="hljs-number">1</span>|<span class="hljs-number">4</span>|<span class="hljs-number">2</span> <span class="hljs-comment">//IE &#x5DE6;&#x952E;|&#x4E2D;&#x952E;|&#x53F3;&#x952E;</span>
+</code></pre>
+</li>
+<li><strong>relatedTarget</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x4E0E;&#x4E8B;&#x4EF6;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x76F8;&#x5173;&#x7684;&#x8282;&#x70B9;<pre><code>&#x5BF9;&#x4E8E; mouseover &#x4E8B;&#x4EF6;&#x6765;&#x8BF4;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x662F;&#x9F20;&#x6807;&#x6307;&#x9488;&#x79FB;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x4E0A;&#x65F6;&#x6240;&#x79BB;&#x5F00;&#x7684;&#x90A3;&#x4E2A;&#x8282;&#x70B9;&#x3002;
+&#x5BF9;&#x4E8E; mouseout &#x4E8B;&#x4EF6;&#x6765;&#x8BF4;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x662F;&#x79BB;&#x5F00;&#x76EE;&#x6807;&#x65F6;&#xFF0C;&#x9F20;&#x6807;&#x6307;&#x9488;&#x8FDB;&#x5165;&#x7684;&#x8282;&#x70B9;&#x3002;
+&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x4E8B;&#x4EF6;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x7528;&#x3002;(&#x4E0D;&#x652F;&#x6301; IE)
+</code></pre></li>
+<li><strong>clientX|clientY</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#x9F20;&#x6807;&#x6307;&#x9488;&#x5411;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x9875;&#x9762;&#xFF08;&#x6216;&#x5BA2;&#x6237;&#x533A;&#xFF09;&#x7684;&#x6C34;&#x5E73;|&#x5782;&#x76F4;&#x5750;&#x6807;</li>
+<li><strong>screenX|screenY</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x9F20;&#x6807;&#x6307;&#x9488;&#x76F8;&#x5BF9;&#x4E8E;&#x5C4F;&#x5E55;&#x7684;&#x6C34;&#x5E73;|&#x5782;&#x76F4;&#x5750;&#x6807;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="js基础.html" class="navigation navigation-prev " aria-label="Previous page: js基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="javascript对象.html" class="navigation navigation-next " aria-label="Next page: javascript对象">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"htmlDom对象","level":"1.4.3","depth":2,"next":{"title":"javascript对象","level":"1.4.4","depth":2,"path":"doc/JavaScript/javascript对象.md","ref":"doc/JavaScript/javascript对象.md","articles":[]},"previous":{"title":"js基础","level":"1.4.2","depth":2,"path":"doc/JavaScript/js基础.md","ref":"doc/JavaScript/js基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/JavaScript/htmlDom对象.md","mtime":"2018-10-30T09:54:34.635Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-30T09:57:09.913Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-changyan/changyan.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

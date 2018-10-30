@@ -5,18 +5,18 @@
 * [介绍](README.md)
 
 * 资料
-    * [参考链接](doc/href/h1.md)
-    * [技术背景](doc/href/h2.md)
+    * [参考链接](doc/href/参考链接.md)
+    * [技术背景](doc/href/技术背景.md)
 
 * 笔记
-    * [前端规范](doc/note/n1.md)
+    * [前端规范](doc/note/前端规范.md)
 
 * Javascript
-    * [js技巧](doc/JavaScript/j1.md)
-    * [js基础](doc/JavaScript/j2.md)
-    * [HTML DOM](doc/JavaScript/j3.md)
-    * [js对象](doc/JavaScript/j4.md)
-    * [js Window](doc/JavaScript/j5.md)
+    * [js技巧](doc/JavaScript/js技巧.md)
+    * [js基础](doc/JavaScript/js基础.md)
+    * [htmlDom对象](doc/JavaScript/htmlDom对象.md)
+    * [javascript对象](doc/JavaScript/javascript对象.md)
+    * [browser对象](doc/JavaScript/browser对象.md)
 
 * Es6
     * [es6总结](doc/Es6/e1.md)
@@ -28,10 +28,10 @@
     * [JSX深度](doc/react/r1.md)
 
 * Typescript
-    * [TS Eslint](doc/typescript/o1.md)
+    * [TS Eslint](doc/typescript/t1.md)
 
 * 其他
-    * [心迹](doc/other/o1.md)
+    * [心迹](doc/other/心迹.md)
 
 
 * [教程](https://blog.csdn.net/u012067966/article/details/50736647)

@@ -216,3 +216,21 @@ break跳出循环，continue跳过循环中的一个迭代
     ```
 * while 循环
 * do/while 循环：至少执行一次 (条件);
+
+####10、构造器函数
+```js
+function person(firstname,lastname,age,eyecolor){
+   this.firstname=firstname;
+   this.lastname=lastname;
+   this.age=age;
+   this.eyecolor=eyecolor;
+
+   this.changeName=changeName;
+   function changeName(name){
+       this.lastname=name;
+   }
+}
+
+var myFather=new person("Bill","Gates",56,"blue"); //创建对象
+myFather.changeName("Ballmer"); //调用对象内方法
+```

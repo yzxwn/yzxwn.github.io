@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="j3.html" />
+    <link rel="next" href="htmlDom对象.html" />
     
     
-    <link rel="prev" href="j1.html" />
+    <link rel="prev" href="js技巧.html" />
     
 
     </head>
@@ -126,9 +126,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../href/h1.html">
+        <li class="chapter " data-level="1.2.1" data-path="../href/参考链接.html">
             
-                <a href="../href/h1.html">
+                <a href="../href/参考链接.html">
             
                     
                     参考链接
@@ -139,9 +139,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../href/h2.html">
+        <li class="chapter " data-level="1.2.2" data-path="../href/技术背景.html">
             
-                <a href="../href/h2.html">
+                <a href="../href/技术背景.html">
             
                     
                     技术背景
@@ -171,9 +171,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../note/n1.html">
+        <li class="chapter " data-level="1.3.1" data-path="../note/前端规范.html">
             
-                <a href="../note/n1.html">
+                <a href="../note/前端规范.html">
             
                     
                     前端规范
@@ -203,9 +203,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="j1.html">
+        <li class="chapter " data-level="1.4.1" data-path="js技巧.html">
             
-                <a href="j1.html">
+                <a href="js技巧.html">
             
                     
                     js技巧
@@ -216,9 +216,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="j2.html">
+        <li class="chapter active" data-level="1.4.2" data-path="js基础.html">
             
-                <a href="j2.html">
+                <a href="js基础.html">
             
                     
                     js基础
@@ -229,12 +229,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="j3.html">
+        <li class="chapter " data-level="1.4.3" data-path="htmlDom对象.html">
             
-                <a href="j3.html">
+                <a href="htmlDom对象.html">
             
                     
-                    HTML DOM
+                    htmlDom对象
             
                 </a>
             
@@ -242,12 +242,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="j4.html">
+        <li class="chapter " data-level="1.4.4" data-path="javascript对象.html">
             
-                <a href="j4.html">
+                <a href="javascript对象.html">
             
                     
-                    js对象
+                    javascript对象
             
                 </a>
             
@@ -255,12 +255,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="j5.html">
+        <li class="chapter " data-level="1.4.5" data-path="browser对象.html">
             
-                <a href="j5.html">
+                <a href="browser对象.html">
             
                     
-                    js Window
+                    browser对象
             
                 </a>
             
@@ -383,9 +383,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../typescript/o1.md">
+        <li class="chapter " data-level="1.8.1" data-path="../typescript/t1.html">
             
-                <span>
+                <a href="../typescript/t1.html">
             
                     
                     TS Eslint
@@ -415,9 +415,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../other/o1.html">
+        <li class="chapter " data-level="1.9.1" data-path="../other/心迹.html">
             
-                <a href="../other/o1.html">
+                <a href="../other/心迹.html">
             
                     
                     心迹
@@ -700,6 +700,22 @@ myVar = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</
 <li>while &#x5FAA;&#x73AF;</li>
 <li>do/while &#x5FAA;&#x73AF;&#xFF1A;&#x81F3;&#x5C11;&#x6267;&#x884C;&#x4E00;&#x6B21; (&#x6761;&#x4EF6;);</li>
 </ul>
+<h4 id="10&#x3001;&#x6784;&#x9020;&#x5668;&#x51FD;&#x6570;">10&#x3001;&#x6784;&#x9020;&#x5668;&#x51FD;&#x6570;</h4>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">person</span>(<span class="hljs-params">firstname,lastname,age,eyecolor</span>)</span>{
+   <span class="hljs-keyword">this</span>.firstname=firstname;
+   <span class="hljs-keyword">this</span>.lastname=lastname;
+   <span class="hljs-keyword">this</span>.age=age;
+   <span class="hljs-keyword">this</span>.eyecolor=eyecolor;
+
+   <span class="hljs-keyword">this</span>.changeName=changeName;
+   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeName</span>(<span class="hljs-params">name</span>)</span>{
+       <span class="hljs-keyword">this</span>.lastname=name;
+   }
+}
+
+<span class="hljs-keyword">var</span> myFather=<span class="hljs-keyword">new</span> person(<span class="hljs-string">&quot;Bill&quot;</span>,<span class="hljs-string">&quot;Gates&quot;</span>,<span class="hljs-number">56</span>,<span class="hljs-string">&quot;blue&quot;</span>); <span class="hljs-comment">//&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+myFather.changeName(<span class="hljs-string">&quot;Ballmer&quot;</span>); <span class="hljs-comment">//&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x5185;&#x65B9;&#x6CD5;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -727,12 +743,12 @@ myVar = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</
 
             
                 
-                <a href="j1.html" class="navigation navigation-prev " aria-label="Previous page: js技巧">
+                <a href="js技巧.html" class="navigation navigation-prev " aria-label="Previous page: js技巧">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="j3.html" class="navigation navigation-next " aria-label="Next page: HTML DOM">
+                <a href="htmlDom对象.html" class="navigation navigation-next " aria-label="Next page: htmlDom对象">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -743,7 +759,7 @@ myVar = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"js基础","level":"1.4.2","depth":2,"next":{"title":"HTML DOM","level":"1.4.3","depth":2,"path":"doc/JavaScript/j3.md","ref":"doc/JavaScript/j3.md","articles":[]},"previous":{"title":"js技巧","level":"1.4.1","depth":2,"path":"doc/JavaScript/j1.md","ref":"doc/JavaScript/j1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/JavaScript/j2.md","mtime":"2018-09-30T09:56:10.152Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-30T10:03:49.021Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"js基础","level":"1.4.2","depth":2,"next":{"title":"htmlDom对象","level":"1.4.3","depth":2,"path":"doc/JavaScript/htmlDom对象.md","ref":"doc/JavaScript/htmlDom对象.md","articles":[]},"previous":{"title":"js技巧","level":"1.4.1","depth":2,"path":"doc/JavaScript/js技巧.md","ref":"doc/JavaScript/js技巧.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/JavaScript/js基础.md","mtime":"2018-10-30T09:54:34.640Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-30T09:57:09.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

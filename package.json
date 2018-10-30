@@ -4,7 +4,8 @@
   "description": "主页",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
+    "testHtml": "node test/index.html",
+    "testJs": "node test/index.js",
     "bookIns": "gitbook install",
     "bookBuild": "gitbook build && xcopy/Y _book /e",
     "bookStart": "gitbook serve"
