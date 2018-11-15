@@ -7,8 +7,7 @@
 [Date](#date)、
 [Math](#math：执行常见的算数任务)、
 [RegExp](#regexp：正则表达式)、
-[Functions](#functions：全局对象)、
-[Events](#events：事件)
+[全局对象](#全局对象)
 
 
 * 对象属性
@@ -38,12 +37,12 @@ var z=0x1F; //31
     * **NEGATIVE_INFINITY**：负无穷大，溢出时返回该值（-Infinity）
     * **POSITIVE_INFINITY**：正无穷大，溢出时返回该值（Infinity）
 * 对象方法
-    * **toFixed(num)**：把数字转换为字符串，结果的小数点后有指定位数的数字(四舍五入)
+    * **toFixed(num?)**：把数字转换为字符串，结果的小数点后有指定位数的数字(四舍五入)
     ```js
     //num：0~20之间的整数，默认：0
     new Number(13).toFixed(2) //13.00
     ```
-    * **toString(radix)**：把数字转换为字符串，使用指定的基数
+    * **toString(radix?)**：把数字转换为字符串，使用指定的基数
     ```js
     //radix基数：2~36之间的整数，默认基数：10
     13.toString(2) //当调用该方法的对象不是 Number 时抛出 TypeError 异常
@@ -62,8 +61,7 @@ var z=0x1F; //31
     ```
 
 #### String
-
-String 类定义的方法都不能改变字符串的内容
+* String 类定义的方法都不能改变字符串的内容
 ```js
 "Volvo XC60"[2]; //l
 
@@ -557,9 +555,9 @@ new RegExp(pattern, attributes);
     patt.lastIndex //0
     ```
 
-#### Functions：全局对象
+#### 全局对象
 * 全局函数：
-    * **isNaN(x)**：检查某个值是否是数字
+    * **isNaN(x)**：检查某个数字是否是NaN
     ```js
     isNaN(5-2) //false
     isNaN("Hello") //true
@@ -594,6 +592,9 @@ new RegExp(pattern, attributes);
     Number(new Date()) //1539846443589，返回从 1970 年 1 月 1 日至今的毫秒数
     Number("8 9") //NaN，对象的值无法转换为数字
     Number(true|false) //1|0
+    Number([]) //0
+    Number([20]) //20
+    Number(null|"") //0
     ```
     * **String(object)**：把对象的值转换为字符串
     ```js
@@ -637,5 +638,3 @@ new RegExp(pattern, attributes);
     * **Infinity**：代表正的无穷大的数值
     * **java**：代表 java.* 包层级的一个 JavaPackage
     * **Packages**：根 JavaPackage 对象
-
-#### Events：事件

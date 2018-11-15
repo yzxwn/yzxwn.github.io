@@ -1,4 +1,4 @@
-## htmlDom对象
+## htmlDom对象 (文档对象模型)
 
 [Document](#document：每个载入浏览器的html文档都会成为document对象)、
 [Element](#element：表示html元素)、
@@ -16,6 +16,16 @@
 * 对象属性:
     * **body**：提供对 <body> 元素的直接访问。对于定义了框架集的文档，该属性引用最外层的 <frameset>
     * **cookie**：设置或返回与当前文档有关的所有 cookie
+    ```js
+    //创建
+    document.cookie="username=John Doe";
+    //使用 expires 为 cookie 添加一个过期时间，默认情况下，cookie 在浏览器关闭时删除
+    //使用 path 参数告诉浏览器 cookie 的路径，默认情况下，cookie 属于当前页面
+    //删除 Cookie：设置 expires 参数为以前的时间即可
+    document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+    //读取
+    var x = document.cookie;
+    ```
     * **domain**：返回当前文档的域名
     * **lastModified**：返回文档被最后修改的日期和时间
     * **referrer**：返回载入当前文档的文档的 URL
@@ -27,8 +37,8 @@
     * **write(exp1,exp2,exp3,....)**：向文档写 HTML 表达式 或 JavaScript 代码
     * **writeln(exp1,exp2,exp3,....)**：等同于 write() 方法，不同的是在每个表达式之后写一个换行符
     * **getElementById()**：返回对拥有指定 id 的第一个对象的引用
-    * **getElementsByName()**：返回带有指定名称的对象集合
-    * **getElementsByTagName()**：返回带有指定标签名的对象集合
+    * **getElementsByName()**：返回带有指定名称的对象集合（Collection）
+    * **getElementsByTagName()**：返回带有指定标签名的对象集合（Collection）
 
 #### Element：表示HTML元素
 * 对象属性:
@@ -80,6 +90,21 @@
     * **lang**：设置或返回元素的语言代码（language-code）
     * **namespaceURI**：返回指定节点的命名空间的 URI
 * 对象方法:
+    * **addEventListener(event,function,useCapture)**：向指定元素添加事件句柄
+    ```js
+    //参数：事件的类型，事件触发后调用的函数，布尔值用于描述事件是冒泡（false默认）还是捕获（true）
+    //冒泡：内部元素的事件会先被触发，然后再触发外部元素
+    //捕获：部元素的事件会先被触发，然后才会触发内部元素的事件
+    //添加的事件句柄不会覆盖已存在的事件句柄，可以向一个元素添加多个事件句柄或多个同类型的事件句柄
+
+    // IE 8
+    element.attachEvent(event, function);
+    element.detachEvent(event, function);
+    ```
+    * **removeEventListener(event,function) **：移除事件的监听（事件类型和调用的函数名都要一致）
+    ```js
+    //
+    ```
     * **appendChild(newListItem)**：向元素添加新的子节点，作为最后一个子节点（可以插入/移动已有元素）
     * **insertBefore(newnode,existingnode)**：在指定的已有的子节点之前插入新节点（可以插入/移动已有元素）
     * **removeChild(node)**：从元素中移除子节点
