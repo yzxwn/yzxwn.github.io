@@ -64,13 +64,10 @@ var z=0x1F; //31
 * String 类定义的方法都不能改变字符串的内容
 ```js
 "Volvo XC60"[2]; //l
-
 new String("abc") // String {0: "a", 1: "b", 2: "c", length: 3}
-
 "John" === new String("John"); //false
 typeof "John" // "string"
 typeof new String("John") // "object"
-
 String(true) // "true"
 String(5) // "5"
 ```
