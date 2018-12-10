@@ -36,6 +36,11 @@ var z=0x1F; //31
     * **NaN**：非数字值（使用 isNaN() 来判断一个值是否是数字，NaN 与所有值都不相等，包括它自己）
     * **NEGATIVE_INFINITY**：负无穷大，溢出时返回该值（-Infinity）
     * **POSITIVE_INFINITY**：正无穷大，溢出时返回该值（Infinity）
+
+    **es6**=========================================================================
+    * **EPSILON**：表示 1 和比最接近 1 且大于 1 的最小 Number 之间的差别
+    * **MIN_SAFE_INTEGER**：表示在 JavaScript中最小的安全的 integer 型数字 (-(253 - 1))
+    * **MAX_SAFE_INTEGER**：表示在 JavaScript 中最大的安全整数（253 - 1）
 * 对象方法
     * **toFixed(num?)**：把数字转换为字符串，结果的小数点后有指定位数的数字(四舍五入)
     ```js
@@ -57,7 +62,28 @@ var z=0x1F; //31
     * **toPrecision(num)**：把数字格式化为指定的长度
     ```js
     //num：规定必须被转换为指数计数法的最小位数，1~21之间的整数，默认：调用方法 toString()
-    new Number(1000).toPrecision(4) //1.000e+4
+    new Nu
+
+    **es6**=========================================================================
+    * **isInteger()**：用来判断给定的参数是否为整数
+    ```js
+    Number.isInteger(10);        // 返回 true
+    Number.isInteger(10.5);      // 返回 false
+    ```
+    * **isSafeInteger()**：判断传入的参数值是否是一个"安全整数"
+    ```js
+    Number.isSafeInteger(10);    // 返回 true
+    Number.isSafeInteger(12345678901234567890);  // 返回 false
+    ```mber(1000).toPrecision(4) //1.000e+4
+    ```
+
+    **技巧**=========================================================================
+    * **数字补0**
+    ```js
+    const addZero1 = (num, len = 2) => (`0${num}`).slice(-len)
+    const addZero2 = (num, len = 2) => (`${num}`).padStart( len   , '0') //es2017:str.padStart(targetLength, padString?)
+    addZero1(3) // 03
+    addZero2(32,4)  // 0032
     ```
 
 #### String
@@ -74,22 +100,6 @@ String(5) // "5"
 * 对象属性
     * **length**：返回字符串的长度
 * 对象方法
-    * **显示字体**：
-    ```js
-    document.write("abc".anchor("myanchor")) //创建 HTML 锚，<a name="myanchor">abc</a>
-    document.write("abc".big()) //大号字体
-    document.write("abc".blink()) //闪动，此方法无法工作于 Internet Explorer 中
-    document.write("abc".bold()) //粗体
-    document.write("abc".fixed()) //打字机字体
-    document.write("abc".fontcolor("Red")) //指定颜色字体
-    document.write("abc".fontsize(7)) //指定字体尺寸，参数必须是从 1 至 7 的数字
-    document.write("abc".italics()) //斜体
-    document.write("abc".link("http://www.w3school.com.cn")) //超链接
-    document.write("abc".small()) //小号字体
-    document.write("abc".strike()) //添加删除线
-    document.write("abc".sub()) //下标
-    document.write("abc".sup()) //上标
-    ```
     * **charAt(index)**：返回指定索引位置的字符或空字符串
     ```js
     'abc'.charAt(1); // "b"
@@ -125,8 +135,7 @@ String(5) // "5"
     var str = "bbbabbabb";
     str.search('a') // 3
     str.search('c') // -1
-    var patt = /a/g
-    str.search(patt) // 3 //忽略标志 g和regexp的lastindex属性，总是从第一个位置开始匹配
+    str.search(/a/g) // 3 //忽略标志 g和regexp的lastindex属性，总是从第一个位置开始匹配
     ```
     * **replace(regexp/substr,replacement)**：替换与正则表达式匹配的子串，返回替换后的字符串
     ```js
@@ -251,6 +260,22 @@ String(5) // "5"
     /*上面代码中，0x20BB7拆成两个字符0xD842和0xDFB7（即两个两字节字符，合成一个四字节字符），就能得到正确的结果。
     码点大于0xFFFF的字符的四字节表示法，由UTF-16编码方法决定*/
     ```
+    * **显示字体**：
+    ```js
+    document.write("abc".anchor("myanchor")) //创建 HTML 锚，<a name="myanchor">abc</a>
+    document.write("abc".big()) //大号字体
+    document.write("abc".blink()) //闪动，此方法无法工作于 Internet Explorer 中
+    document.write("abc".bold()) //粗体
+    document.write("abc".fixed()) //打字机字体
+    document.write("abc".fontcolor("Red")) //指定颜色字体
+    document.write("abc".fontsize(7)) //指定字体尺寸，参数必须是从 1 至 7 的数字
+    document.write("abc".italics()) //斜体
+    document.write("abc".link("http://www.w3school.com.cn")) //超链接
+    document.write("abc".small()) //小号字体
+    document.write("abc".strike()) //添加删除线
+    document.write("abc".sub()) //下标
+    document.write("abc".sup()) //上标
+    ```
 
 #### Array
 * 对象属性
@@ -352,6 +377,13 @@ String(5) // "5"
     arr; //[1,2,3]
     ```
 
+    **技巧**============================================================================
+    * **过滤数组中的所有假值**
+    ```js
+    const compact = arr => arr.filter(Boolean)
+    compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34])  //[ 1, 2, 3, 'a', 's', 34 ]
+    ```
+
 #### Boolean
 * false：0、-0、null、""、false、undefined、NaN
 * 对象方法
@@ -415,6 +447,14 @@ String(5) // "5"
     * **pow(x,y)**：返回 x 的 y 次幂
     * **sin(x)**：返回数的正弦
     * **tan(x)**：返回角的正切
+
+    **技巧**============================================================================
+    * **精确到指定位数的小数**
+    ```js
+    const round = (n, decimals = 0) => Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
+    round(1.345, 2) // 1.35
+    round(1.345, 1) // 1.3
+    ```
 
 #### RegExp：正则表达式
 ```js

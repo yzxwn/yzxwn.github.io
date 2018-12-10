@@ -1,10 +1,19 @@
 ## js技巧
 
+[小结](#小结)、
 [代理](#代理)、
 [数组去重](#数组去重)、
-[手机端横屏](#手机端横屏)、
 [复制](#复制)、
 [系统检测](#系统检测)
+
+#### 小结
+* **this**
+```
+this，函数执行的上下文，可以通过apply，call，bind改变this的指向。
+对于匿名函数或者直接调用的函数来说，this指向全局上下文（浏览器为window，nodejs为global），
+剩下的函数调用，那就是谁调用它，this就指向谁。
+当然还有es6的箭头函数，箭头函数的指向取决于该箭头函数声明的位置，在哪里声明，this就指向哪里。
+```
 
 #### 代理
 
@@ -42,33 +51,6 @@ return arr;
 var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
     console.log(unique(arr))
     //[1, "true", 15, false, undefined, NaN, NaN, "NaN", "a", {…}, {…}]     //NaN和{}没有去重，两个null直接消失了
-```
-
-#### 手机端横屏
-
-[原文](https://blog.csdn.net/cs729298/article/details/76982821)
-```js
-const screen = () => {
-    const width = document.documentElement.clientWidth;
-    const height = document.documentElement.clientHeight;
-    const doc = document.getElementsByClassName("watch")[0];
-    if(width>height){
-        doc.style.width = width + "px";
-        doc.style.height = height + "px";
-        doc.style.top = '0px';
-        doc.style.left = '0px';
-        doc.style.transform = 'rotate(0)';
-    }else{
-        doc.style.width = height + "px";
-        doc.style.height = width + "px";
-        doc.style.top = (height - width) / 2 + 'px';
-        doc.style.left = 0 - (height - width) / 2 + 'px';
-        doc.style.transform = 'rotate(90deg)';
-    }
-}
-
-screen();
-window.onresize=screen
 ```
 
 #### 复制
@@ -193,7 +175,7 @@ p.then((stream) => {
 p.catch((e) => {
     let audioError;
     const errorName=e.name;
-    if(errorName==="NotAllowedError"){
+    if(errorName==="NotAllowedError"||errorName==="PermissionDeniedError"){
         audioError={
             name:"NotAllowedError",
             message:"当前浏览器已禁止访问麦克风，请设置为允许后刷新页面"
@@ -208,6 +190,11 @@ p.catch((e) => {
             name:"NotSupportedError",
             message:"该浏览器不支持使用麦克风"
         };
+    }else if(errorName==="NotReadableError"||errorName==="TrackStartError"){
+         audioError={
+             name:"TrackStartError",
+             message:"麦克风被其他程序占用"
+         };
     }else{
         audioError=e;
     }
@@ -230,13 +217,58 @@ changMic = (deviceId) => {
 micp.getTracks().forEach(function(track) {
     track.stop();
 });
+//处理音频数据
+const audioContext = new AudioContext({
+    latencyHint: 'interactive',
+    sampleRate: 44100
+});//页面关闭之后需要执行audioContext.close();否则在360中执行6次之后报错
+if(audioContext.state === "suspended"){
+    audioContext.resume();
+}
+const input = audioContext.createMediaStreamSource(stream);
+const processor = audioContext.createScriptProcessor(256, 1, 1);
+input.connect(processor);
+processor.connect(audioContext.destination);
+processor.onaudioprocess = (e) => {
+    filterData(e.inputBuffer.getChannelData(0));//number[]
+};
+const filterData=(data)=>{
+    let length=data.length;
+    let result=[];
+    for(let i =0;i<length;i+=4){
+        result.push(data.slice(i,i+4));
+    }
+    return result.map((arr)=>{
+        let ave=arr.reduce(function(prev, curr){
+            return prev + curr;
+        })/4;
+        const num=Math.min(Math.abs(Math.ceil(1000* ave)),this.rateMax);
+        let pixal=this.canvasHeight/this.rateMax;
+        pixal=((this.rateMax-num)/(this.rateMax/2))*pixal+pixal;
+        return Math.abs(num*pixal/2);
+    });
+};
 ```
 **5、摄像头**
 ```js
 //初始化
 let video = "";
+const ratio = {
+    普清: {width: 320, height: 180},
+    标清: {width: 640, height: 360},
+    高清: {width: 1280, height: 720},
+};
 const p = navigator.mediaDevices.getUserMedia({
     video: {
+        deviceId:{
+            exact:deviceId//摄像头id
+        },
+        width:{
+            ideal:width//不同分辨率
+        },
+        height:{
+            ideal:height//不同分辨率
+        },
         aspectRatio: 1.777777778//画面比例
     },
     audio: false
@@ -244,12 +276,11 @@ const p = navigator.mediaDevices.getUserMedia({
 p.then((stream) => {
     video = stream;
     //在<video/>内显示画面
-    const src = window.URL.createObjectURL(stream);
 });
 p.catch((e) => {
     let videoError;
     const errorName=e.name;
-    if(errorName==="NotAllowedError"){
+    if(errorName==="NotAllowedError"||errorName==="PermissionDeniedError"){
         //权限未允许
         videoError={
             name:"NotAllowedError",
@@ -265,6 +296,11 @@ p.catch((e) => {
             name:"NotSupportedError",
             message:"该浏览器不支持使用摄像头"
         };
+    }else if(errorName==="NotReadableError"||errorName==="TrackStartError"){
+         videoError={
+             name:"NotReadableError",
+             message:"摄像头被其他程序占用"
+         };
     }else{
         videoError=e;
     }
@@ -275,7 +311,13 @@ changMic = (deviceId) => {
     navigator.getUserMedia({
         video:{
             deviceId:{
-                exact:deviceId
+                exact:deviceId//摄像头id
+            },
+            width:{
+                ideal:width//不同分辨率
+            },
+            height:{
+                ideal:height//不同分辨率
             },
             aspectRatio: 1.777777778
         },
@@ -283,7 +325,6 @@ changMic = (deviceId) => {
     }, (stream) => {
         video = stream;
         //在<video/>内显示画面
-        const src = window.URL.createObjectURL(stream);
     }, (error) => {
         console.log("navigator.getUserMedia error:", error)
     })
@@ -292,4 +333,16 @@ changMic = (deviceId) => {
 video.getTracks().forEach(function(track) {
     track.stop();
 });
+//在<video/>内显示画面
+setTimeout(()=>{
+    if(stream&&stream.active){
+        videoDocument.srcObject = stream;
+        //videoDocument.src = window.URL.createObjectURL(stream); 在cream7.1报错
+        videoDocument.onloadedmetadata = () => {
+            videoDocument.play();
+        };
+    }else{
+        alert("摄像头被其他程序占用");//在cream7.1中不报错，stream.active===false会延时
+    }
+},1000);
 ```
