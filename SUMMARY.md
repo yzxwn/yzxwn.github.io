@@ -22,7 +22,7 @@
         * [less](doc/primary/css/less.md)
         * [sass](doc/primary/css/sass.md)
     * Html
-        * [css技巧](doc/primary/html/h1.md)
+        * [html基础](doc/primary/html/html基础.md)
     * [Json](doc/primary/Json.md)
     * [Ajax](doc/primary/Ajax.md)
 
