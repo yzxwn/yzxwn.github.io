@@ -1,13 +1,13 @@
 ## js基础
 
-[语法](#语法)、
-[变量](#变量)、
-[数据类型](#数据类型)、
-[运算符](#运算符)、
-[条件判断](#条件判断)、
-[循环](#循环)、
-[函数](#函数)、
-[错误](#错误)
+* [语法](#语法)
+* [变量](#变量)
+* [数据类型](#数据类型)
+* [运算符](#运算符)
+* [条件判断](#条件判断)
+* [循环](#循环)
+* [函数](#函数)
+* [错误](#错误)
 
 #### 语法
 * JavaScript 对大小写敏感
@@ -51,6 +51,14 @@ var a,b,c;
 a = void ( b = 5, c = 7 );//a = undefined, b = 5, c = 7
 onclick = "javascript:void(0)";//单击此处什么也不会发生
 onclick = "javascript:void(alert('Warning!!!'))";//点击后显示警告信息
+```
+* with：用于设置代码在特定对象中的作用域
+```js
+//语法：with (expression) statement
+var sMessage = "hello";
+with(sMessage) {
+    console.log(toUpperCase());	//输出 "HELLO"
+}
 ```
 * 代码规范
     * 命名规则：
@@ -121,21 +129,13 @@ function myFunction()
 局部变量会在函数运行以后被删除
 全局变量会在页面关闭后被删除
 ```
-* 变量提升：函数声明和变量声明总是会被解释器悄悄地被"提升"到方法体的最顶部
-```js
-x = 5;
-console.log(x); //5
-var x;
-//变量的初始化不会提升
-console.log(y); //undefined
-var y = 5;
-```
 
 #### 数据类型
 * 数据类型
     * 值类型(基本类型)：字符串、数字、布尔、对空（Null）、未定义（Undefined）、Symbol（ES6：表示独一无二的值）
     * 引用数据类型：数组、对象、函数
     * 数据类型：string、number、boolean、object、function
+    * 基本数据类型：string、number、boolean、null、undefined
     * 对象类型：Object、Date、Array
     * 不包含任何值的数据类型：null、undefined
 * 判断类型
@@ -249,6 +249,7 @@ var y = 5;
     var x = + y;      // x 是一个数字
     var y = "John";   // y 是一个字符串
     var x = + y;      // x 是一个数字 (NaN)
+    var time = +new Date(); //time是当前时间的毫秒数
     ```
 
 #### 条件判断

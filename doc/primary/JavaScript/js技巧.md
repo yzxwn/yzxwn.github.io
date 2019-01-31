@@ -1,80 +1,12 @@
 ## js技巧
 
-[小结](#小结)、
-[代理](#代理)、
-[数组去重](#数组去重)、
-[复制](#复制)、
-[系统检测](#系统检测)
+* [复制](#复制)
+* [系统检测](#系统检测)
+* [元素距离顶部高度](#元素距离顶部高度)
+* [节流函数](#节流函数)
 
-#### 小结
-* **this**
-```
-this，函数执行的上下文，可以通过apply，call，bind改变this的指向。
-对于匿名函数或者直接调用的函数来说，this指向全局上下文（浏览器为window，nodejs为global），
-剩下的函数调用，那就是谁调用它，this就指向谁。
-当然还有es6的箭头函数，箭头函数的指向取决于该箭头函数声明的位置，在哪里声明，this就指向哪里。
-```
-* **图片懒加载**
-```
-
-```
-* **服务端渲染（SSR）**
-```
-
-```
-* **MVC MVVM**
-```
-
-```
-* **serves work**
-```
-
-```
-* **跨域**
-```
-
-```
-
-#### 代理
-
-[原文](https://segmentfault.com/a/1190000016468988)
-
-#### 数组去重
-
-[原文](https://segmentfault.com/a/1190000016418021)
-
-**1、es6 set去重**
-
-代码最少，无法去掉空对象
-```js
-function unique (arr) {
-  return Array.from(new Set(arr))
-}
-var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
-console.log(unique(arr))
- //[1, "true", true, 15, false, undefined, null, NaN, "NaN", 0, "a", {}, {}]
-```
-
-**2、for循环，splice去重**
-```js
-function unique(arr){
-        for(var i=0; i<arr.length-1; i++){
-            for(var j=i+1; j<arr.length; j++){
-                if(arr[i]==arr[j]){         //第一个等同于第二个，splice方法删除第二个
-                    arr.splice(j,1);
-                    j--;
-                }
-            }
-        }
-return arr;
-}
-var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
-    console.log(unique(arr))
-    //[1, "true", 15, false, undefined, NaN, NaN, "NaN", "a", {…}, {…}]     //NaN和{}没有去重，两个null直接消失了
-```
 
 #### 复制
-
 ```js
 // 创建'虚拟'DOM
 const input = document.createElement('input');
@@ -367,8 +299,47 @@ setTimeout(()=>{
 },1000);
 ```
 
-#### web sorket
+#### 元素距离顶部高度
 
 ```js
+function getTop(el, initVal) {
+    let top = el.offsetTop + initVal;
+    if (el.offsetParent !== null) {
+        top += el.offsetParent.clientTop;
+        return getTop(el.offsetParent, top);//尾递归
+    } else {
+        return top;
+    }
+}
+//等于 e1.getBoundingClientRect().top
+```
 
+#### 节流函数
+
+```js
+/**
+ * 持续触发事件，每隔一段时间，只执行一次事件。
+ * @param fun 要执行的函数
+ * @param delay 延迟时间
+ * @param time 在 time 时间内必须执行一次
+ */
+function throttle(fun, delay, time) {
+    var timeout;
+    var previous = +new Date();
+    return function () {
+        var now = +new Date();
+        var context = this;
+        var args = arguments;
+        clearTimeout(timeout);
+        if (now - previous >= time) {
+            fun.apply(context, args);
+            previous = now;
+        } else {
+            timeout = setTimeout(function () {
+                fun.apply(context, args);
+            }, delay);
+        }
+    }
+}
+window.addEventListener('scroll', throttle(fun, 200, 1000), false);
 ```

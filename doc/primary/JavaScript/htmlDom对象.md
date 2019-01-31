@@ -1,9 +1,9 @@
 ## htmlDom对象 (文档对象模型)
 
-[Document](#document：每个载入浏览器的html文档都会成为document对象)、
-[Element](#element：表示html元素)、
-[Attribute](#attribute：表示html属性)、
-[Event](#event：代表事件的状态)
+* [Document](#document：每个载入浏览器的html文档都会成为document对象)
+* [Element](#element：表示html元素)
+* [Attribute](#attribute：表示html属性)
+* [Event](#event：代表事件的状态)
 
 #### Document：每个载入浏览器的HTML文档都会成为Document对象
 * 对象集合:

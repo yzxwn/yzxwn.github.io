@@ -384,3 +384,20 @@ if (module.hot) {
 //源映射：准确定位错误
 devtool: 'source-map'
 ```
+
+* **创建npm包**
+```js
+//登录
+npm login
+//发布
+npm publish
+//强制删除
+npm unpublish --force
+//过滤npm提交文件（创建.npmignore文件）
+npm unpublish --force
+//错误 no_perms Private mode enable, only admin can publish this module（切换到npmjs的网址）
+npm config set registry registry.npmjs.org
+//错误You do not have permission to publish "npmtest". Are you logged in as the correct user?(包名重复)
+```
+
+

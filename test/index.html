@@ -13,7 +13,7 @@
     <script src="highlight/highlight.pack.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
-        console.log(hljs.listLanguages());
+//        console.log(hljs.listLanguages());
     </script>
 
 </head>
@@ -44,6 +44,92 @@ const a:string = "1";
 //    Array.prototype.slice.call(document.getElementsByTagName('code')).map((item)=>{
 //        hljs.highlightBlock(item);
 //    })
+//var ws = new WebSocket("wss://echo.websocket.org");
+//
+//ws.onopen = function(evt) {
+//    console.log("Connection open ...");
+//    ws.send(JSON.stringify({a:"122"}));
+//};
+//
+//ws.onmessage = function(evt) {
+//    console.log( "Received Message: " + evt.data);
+//    ws.close();
+//};
+//
+//ws.onclose = function(evt) {
+//    console.log("Connection closed.");
+//};
+
+//http://127.0.0.1:63342/yzxwn.github.io/test/index.html?_ijt=kpv2fcodtmhta124trqd10th4j
+//const appID = "wx50a2ce128ee2c417",
+//    appsecret = "1492488b47bb6b0af6ee415efb49bd33",
+//    url = "http://127.0.0.1:63342/yzxwn.github.io/test/index.html?_ijt=kpv2fcodtmhta124trqd10th4j";
+//function getQueryVariable(variable)
+//{
+//    var query = window.location.search.substring(1);
+//    var vars = query.split("&");
+//    for (var i=0;i<vars.length;i++) {
+//        var pair = vars[i].split("=");
+//        if(pair[0] == variable){return pair[1];}
+//    }
+//    return(false);
+//}
+//const code = getQueryVariable("code");
+//if(code){
+//    const get = (url, callback)=>{
+//        var xhr = new XMLHttpRequest();
+//        xhr.open("GET", url, true);
+////        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+//        xhr.send();
+//        xhr.onreadystatechange = function(){
+//            if(xhr.readyState === 4 && xhr.status === 200){
+//                callback(JSON.parse(xhr.responseText));
+//            }
+//        }
+//    };
+//
+//
+//    const token = JSON.parse(localStorage.getItem("wxToken"));
+//    if(token) {
+//        //已获取token，获取用户信息
+//        const userUrl = `https://api.weixin.qq.com/sns/userinfo?access_token=${token.access_token}&openid=${token.openid}&lang=zh_CN`;
+//        get(userUrl, (res)=>{
+//            localStorage.setItem('wxUserInfo',JSON.stringify(res));
+//        })
+//    }else{
+//        //授权成功，换取网页授权access_token
+//        const tokenUrl = `https://api.weixin.qq.com/sns/oauth2/access_token?appid=${appID}&secret=${appsecret}&code=${code}&grant_type=authorization_code`;
+//        get(tokenUrl, (res)=>{
+//            localStorage.setItem('wxToken',JSON.stringify(res));
+//        })
+//    }
+//}else{
+//    //没有授权
+//    const wxUserInfo = localStorage.getItem("wxUserInfo");
+//    if(wxUserInfo) {
+//        //已经授权
+//        console.log(JSON.parse(wxUserInfo));
+//    } else {
+//        //授权
+//        const allowUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appID}&redirect_uri=${encodeURIComponent(url)}&response_type=code&scope=snsapi_userinfo#wechat_redirect`;
+//        window.location.href = allowUrl;
+//    }
+//}
+
+    const get = (url, callback)=>{
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+//        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        xhr.send();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                callback(JSON.parse(xhr.responseText));
+            }
+        }
+    };
+    get("https://graph.qq.com/user/get_user_info", (res)=>{
+        alert(res)
+    })
 
 </script>
 </body>

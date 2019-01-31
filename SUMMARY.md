@@ -27,10 +27,13 @@
     * [Ajax](doc/primary/Ajax.md)
 
 * 扩展技术
+    * [知识扩展](doc/extend/知识扩展.md)
     * React
         * [JSX深度](doc/extend/react/r1.md)
     * Typescript
         * [TS Eslint](doc/extend/typescript/t1.md)
+    * Nodejs
+        * [教程](doc/extend/Nodejs/n1.md)
 
 * 手机端页面
     * [h5技巧](doc/h5/h5技巧.md)
@@ -45,4 +48,4 @@
     * [心迹](doc/other/心迹.md)
 
 
-* [教程](https://blog.csdn.net/u012067966/article/details/50736647)
+* [文档教程](https://blog.csdn.net/u012067966/article/details/50736647)

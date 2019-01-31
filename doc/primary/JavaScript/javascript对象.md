@@ -1,13 +1,13 @@
 ## javascript对象
 
-[Number](#number)、
-[String](#string)、
-[Array](#array)、
-[Boolean](#boolean)、
-[Date](#date)、
-[Math](#math：执行常见的算数任务)、
-[RegExp](#regexp：正则表达式)、
-[全局对象](#全局对象)
+* [Number](#number)
+* [String](#string)
+* [Array](#array)
+* [Boolean](#boolean)
+* [Date](#date)
+* [Math](#math：执行常见的算数任务)
+* [RegExp](#regexp：正则表达式)
+* [全局对象](#全局对象)
 
 
 * 对象属性

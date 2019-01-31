@@ -1,8 +1,7 @@
 ## less
 
-[原文](http://lesscss.org)
-
-[原文：中文](http://lesscss.cn/)
+* [原文](http://lesscss.org)
+* [原文：中文](http://lesscss.cn/)
 
 #### 变量
 ```less

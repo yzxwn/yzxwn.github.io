@@ -1,10 +1,10 @@
 ## browser（浏览器）对象
 
-[Window](#window：浏览器中打开的窗口)、
-[Navigator](#navigator：有关浏览器的信息)、
-[Screen](#screen：有关客户端显示屏幕的信息)、
-[History](#history：包含用户（在浏览器窗口中）访问过的url)、
-[Location](#location：包含有关当前url的信息)
+* [Window](#window：浏览器中打开的窗口)
+* [Navigator](#navigator：有关浏览器的信息)
+* [Screen](#screen：有关客户端显示屏幕的信息)
+* [History](#history：包含用户（在浏览器窗口中）访问过的url)
+* [Location](#location：包含有关当前url的信息)
 
 #### Window：浏览器中打开的窗口
 * 对象集合:

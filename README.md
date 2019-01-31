@@ -1,5 +1,4 @@
 # yzxwn.github.io
-主页
 
 ### 地址
 https://yzxwn.github.io
