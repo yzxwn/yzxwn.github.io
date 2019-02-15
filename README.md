@@ -3,10 +3,14 @@
 ### 地址
 https://yzxwn.github.io
 
+### Github
+https://github.com/yzxwn
+
 ### 描述
 对前端学习的一些技术和知识点总结
 
-### 步骤
+
+### 项目创建步骤
 1.创建git项目，名称为“用户名.github.io”<br/>
 2.本地下载git项目
 ```js

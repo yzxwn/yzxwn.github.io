@@ -7,6 +7,8 @@
 * 笔记
     * [参考链接](doc/note/参考链接.md)
     * [技术背景](doc/note/技术背景.md)
+    * [知识扩展](doc/note/知识扩展.md)
+    * [心迹](doc/note/心迹.md)
 
 * 基础技术
     * Javascript
@@ -27,7 +29,6 @@
     * [Ajax](doc/primary/Ajax.md)
 
 * 扩展技术
-    * [知识扩展](doc/extend/知识扩展.md)
     * React
         * [JSX深度](doc/extend/react/r1.md)
     * Typescript
@@ -43,9 +44,6 @@
     * [Git](doc/tool/Git.md)
     * [Svn](doc/tool/Svn.md)
     * [Webpack4](doc/tool/Webpack4.md)
-
-* 其他
-    * [心迹](doc/other/心迹.md)
 
 
 * [文档教程](https://blog.csdn.net/u012067966/article/details/50736647)
