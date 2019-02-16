@@ -7,7 +7,7 @@ https://yzxwn.github.io
 https://github.com/yzxwn
 
 ### 描述
-对前端学习的一些技术和知识点总结
+利用gitbook对前端学习的一些技术和知识点总结
 
 
 ### 项目创建步骤
