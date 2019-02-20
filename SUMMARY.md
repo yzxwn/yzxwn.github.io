@@ -18,7 +18,7 @@
         * [browser对象](doc/primary/JavaScript/browser对象.md)
         * [htmlDom对象](doc/primary/JavaScript/htmlDom对象.md)
     * Es6
-        * [es6总结](doc/primary/Es6/e1.md)
+        * [es6、es7、es8](doc/primary/Es6/e1.md)
     * Css
         * [css技巧](doc/primary/css/css技巧.md)
         * [less](doc/primary/css/less.md)
