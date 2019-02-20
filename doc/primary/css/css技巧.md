@@ -44,6 +44,14 @@ justify-content:center;
 align-items:center;
 }
 -------------------
+.parent{
+display:flex;
+display: -webkit-flex;
+}
+.children{
+margin: 0;
+}
+-------------------
 position: absolute;
 top: 50%;
 left: 50%;
