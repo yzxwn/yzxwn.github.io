@@ -132,27 +132,25 @@ function myFunction()
 
 #### 数据类型
 * 数据类型
-    * 值类型(基本类型)：字符串、数字、布尔、对空（Null）、未定义（Undefined）、Symbol（ES6：表示独一无二的值）
-    * 引用数据类型：数组、对象、函数
-    * 数据类型：string、number、boolean、object、function
-    * 基本数据类型：string、number、boolean、null、undefined
-    * 对象类型：Object、Date、Array
-    * 不包含任何值的数据类型：null、undefined
+    * 值类型(基本类型)：string、number、boolean、object、null（正常的意料之中的值的空缺）、undefined（类似错误的出乎意料的值的空缺）、symbol（ES6：表示独一无二的值）
+    * 引用数据类型：Object、Array、Function
+    * 对象类型：Array、Function、Date、RegExp、Error
 * 判断类型
-    * typeof 操作符
+    * typeof 数据：返回一个表示数据类型的字符串
         ```js
-        typeof "John"                 // 返回 string
-        typeof 3.14                   // 返回 number
-        typeof NaN                    // 返回 number
-        typeof false                  // 返回 boolean
-        typeof [ 1,2,3,4]              // 返回 object
-        typeof {name: 'John', age:34}  // 返回 object
-        typeof new Date()             // 返回 object
-        typeof function () {}         // 返回 function
-        typeof myCar                  // 返回 undefined
-        typeof null                   // 返回 object
+        Object、Array、null -> object
+        function -> function
+        undefined -> undefined
+        string -> string
+        number -> number
+        boolean -> boolean
+        symbol -> symbol
         ```
-    * constructor 属性：返回所有 JavaScript 变量的构造函数
+    * 实例对象 instanceof 构造函数：判断左操作数对象的原型链上是否有右边这个构造函数的prototype属性
+        ```js
+        String = String、Object
+        ```
+    * 实例对象.constructor：返回实例对象的构造函数
         ```js
         "John".constructor                 // 返回函数 String()  { [native code] }
         (3.14).constructor                 // 返回函数 Number()  { [native code] }
@@ -163,6 +161,10 @@ function myFunction()
         function() {}.constructor         // 返回函数 Function(){ [native code] }
 
         myArray.constructor.toString().indexOf("Array") > -1; //判断数组
+        ```
+    * Object.prototype.toString.call(数据)：返回[object 调用者的具体类型]
+        ```js
+        String,Number,Boolean,Undefined,Null,Function,Date,Array,RegExp,Error,HTMLDocument,Window
         ```
 * 类型转换
     * 函数转换
@@ -184,6 +186,9 @@ function myFunction()
     myVar = {name:"Fjohn"}  // toString 转换为 "[object Object]"
     myVar = [1,2,3,4]       // toString 转换为 "1,2,3,4"
     myVar = new Date()      // toString 转换为 "Fri Jul 18 2014 09:08:55 GMT+0200"
+    ```
+    * 隐式转换：==
+    ```js
 
     ```
 

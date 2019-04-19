@@ -5,6 +5,16 @@
 * [Attribute](#attribute：表示html属性)
 * [Event](#event：代表事件的状态)
 
+```
+时间线：浏览器加载页面开始到页面加载结束的总流程
+构建dom树 document.readState为“loading”
+异步css加载 同步script加载执行 异步defer script加载 异步async script加载并执行
+异步src加载 dom树构建完成形成 document.readState变成“interactive”
+异步defer script执行
+document DOMContentLoaded 异步事件驱动阶段
+script加载并执行完毕 资源加载完毕 window.onload
+```
+
 #### Document：每个载入浏览器的HTML文档都会成为Document对象
 * 对象集合:
     * **all[i]|all[name]|all.tags[tagname]**：提供对文档中所有 HTML 元素的访问

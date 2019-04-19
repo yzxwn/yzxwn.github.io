@@ -10,6 +10,46 @@
 * [全局对象](#全局对象)
 
 
+```
+//es2018
+命名捕获：
+let {year,month,day} = "2018-10-28".match(/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/).groups
+"2018-10-28".replace(/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/,"$<year>/$<month>/$<day>") = "2018/10/28"
+反向引用命名捕获：(/^(?<a>1234)-\k<a>$/).test("1234-1234") = true
+s修饰符：/\d.\d/s.test("2\n2")=true
+标签函数：
+function a(b){console.log(b)}
+a`1` //["1", raw: ["1"]]
+```
+* Object
+```
+//es6
+Object.is(a,b):判断a,b是否一样
+Object.assign(o1,o2,...):合并/复制对象/数组
+//es2017
+for...of: let key of Object.keys(obj),let [key,value] of Object.entries(obj)
+```
+* 枚举遍历
+```
+obj.propertyIsEnumerable(属性名)：检查自身可枚举属性
+obj.hasOwnPreperty(属性名)：检查自身所有属性
+for/in：遍历自身和继承可枚举属性
+属性名 in obj：自身和继承所有属性
+```
+* 属性特性
+```
+数据属性：值（value）、可写性（writable）、可枚举性（enumerable）、可配置性（configurable）
+存取器属性：读取（get）、写入（set）、可枚举性（enumerable）、可配置性（configurable）
+Object.getOwnPropertyDescriptor(obj,属性名)：获取对象某个属性的描述符
+Object.definePeoperty(obj,属性名,描述符)：设置属性的特征
+Object.definePeoperties(obj,{属性名：描述符,...})：同时设置多个属性的特征
+```
+* 可扩展性（冻结）
+```
+Object.preventExtensions(obj)：将对象转换为不可扩展的（不能添加新属性）
+Object.seal(obj)：+，对象的自有属性都设置为不可配置（不能删除或配置）
+Object.freeze(obj)：+，+，自有的数据属性设为只读（不能删除或配置或修改，对象本身冻结，对象的属性没有冻结）
+```
 * 对象属性
     * **constructor**：返回对创建此对象的对象函数的引用
     * **prototype**：使您有能力向对象添加属性和方法
@@ -18,6 +58,25 @@
     * **valueOf()**：返回对象的原始值
 
 #### Number
+* 基本
+```
+//es5
+Number():
+//es6
+二进制(Binary)：0b11->3
+八进制(Octal)：0o11->8
+Number.parseInt()：转换成整数
+Number.parseFloat()：转换成浮点数
+Number.isNaN()：等于isNaN()
+Number.isFinite()：判断是不是数字
+Number.isInteger()：判断是不是整数
+Number.Number.isSafeInteger()：安全整数，-(2^53-1)到(2^53-1)，Number.MIN_SAFE_INTEGER到Number.MAX_SAFE_INTEGER
+指数运算符：2**3=8
+取整：Math.trunc(4.5) = 4
+判断正数、负数、0：Math.sign(number) = 1、-1、0、-0
+立方根：Math.cbrt(8) = 2
+
+```
 * 整数（不使用小数点或指数计数法）最多为 15 位
 * 小数的最大位数是 17，但是浮点运算并不总是 100% 准确
 ```js
@@ -86,7 +145,7 @@ var z=0x1F; //31
     addZero2(32,4)  // 0032
     ```
 
-#### String
+#### String（类似于只读的数组）
 * String 类定义的方法都不能改变字符串的内容
 ```js
 "Volvo XC60"[2]; //l
@@ -278,6 +337,29 @@ String(5) // "5"
     ```
 
 #### Array
+* 基本
+```
+//es5
+forEach(fun,this):item,index,arr
+map(fun,this):与return配合使用,返回新数组
+some(fun):return boolean，至少一个true
+every(fun):return boolean，都是true
+reduce(fun): pre,item,index,arr，可以return
+reduceRight(fun): 从右往左
+//es6
+for...of: let value of arr,let key of arr.keys(),let [key,value] of arr.entries()
+Array.from(arr)相当于[].slice.call(arr)：类数组arr必须有length属性
+find(fun):返回查找到的符合条件的第一个成员
+findIndex(fun):返回查找到的符合条件的第一个成员的位置
+fill(fun,startIndex,endIndex):填充，不包含endIndex
+includes(str):
+```
+* 类数组
+```
+数组：新增元素时自动更新length，设置length较小时自动截断数组中index不小于length的元素
+Object.prototype.toString.call(obj) === "[object Object]"   obj是对象
+obj.length===Math.floor(Math.abs(obj.length))&&o.length<2**32   length是非负整数且小于2^32
+```
 * 对象属性
     * **length**：设置或返回数组中元素的数目
 * 对象方法
@@ -378,6 +460,12 @@ String(5) // "5"
     ```
 
     **技巧**============================================================================
+    * **类数组转换成数组**
+    ```js
+    Array.prototype.slice.call(arr);
+    Array.from(arr);
+    [...arr];
+    ```
     * **过滤数组中的所有假值**
     ```js
     const compact = arr => arr.filter(Boolean)
@@ -485,7 +573,7 @@ new RegExp(pattern, attributes);
 > **元字符**：有特殊含义的字符
     >> .：查找单个字符，除了换行和行结束符
 
-    >> \w：查找单词字符（A-z0-9）
+    >> \w：查找单词字符（A-z0-9_）
 
     >> \W：查找非单词字符
 
@@ -518,6 +606,8 @@ new RegExp(pattern, attributes);
     >> \xdd：查找以十六进制数 dd 规定的字符
 
     >> \uxxxx：查找以十六进制数 xxxx 规定的 Unicode 字符
+
+    >> (\w)\1(\w)\2：匹配xxyy
 
 > **量词**
     >> n+：匹配任何包含至少一个 n 的字符串

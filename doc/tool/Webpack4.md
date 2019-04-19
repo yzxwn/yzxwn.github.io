@@ -398,6 +398,8 @@ npm unpublish --force
 //错误 no_perms Private mode enable, only admin can publish this module（切换到npmjs的网址）
 npm config set registry registry.npmjs.org
 //错误You do not have permission to publish "npmtest". Are you logged in as the correct user?(包名重复)
+//切换淘宝源
+npm install --registry https://registry.npm.taobao.org
 ```
 
 
