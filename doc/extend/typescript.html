@@ -68,7 +68,7 @@
     <link rel="next" href="nodejs.html" />
     
     
-    <link rel="prev" href="react/r1.html" />
+    <link rel="prev" href="vue.html" />
     
 
     </head>
@@ -126,12 +126,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../note/参考链接.html">
+        <li class="chapter " data-level="1.2.1" data-path="../note/学习链接.html">
             
-                <a href="../note/参考链接.html">
+                <a href="../note/学习链接.html">
             
                     
-                    参考链接
+                    学习链接
             
                 </a>
             
@@ -139,20 +139,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../note/技术背景.html">
-            
-                <a href="../note/技术背景.html">
-            
-                    
-                    技术背景
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3" data-path="../note/知识扩展.html">
+        <li class="chapter " data-level="1.2.2" data-path="../note/知识扩展.html">
             
                 <a href="../note/知识扩展.html">
             
@@ -165,7 +152,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../note/心迹.html">
+        <li class="chapter " data-level="1.2.3" data-path="../note/心迹.html">
             
                 <a href="../note/心迹.html">
             
@@ -442,26 +429,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" >
+        <li class="chapter " data-level="1.4.1" data-path="react.html">
             
-                <span>
+                <a href="react.html">
             
                     
                     React
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1.1" data-path="react/r1.html">
-            
-                <a href="react/r1.html">
-            
-                    
-                    JSX深度
             
                 </a>
             
@@ -469,12 +442,20 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.2" data-path="vue.html">
+            
+                <a href="vue.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
 
-            </ul>
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="typescript.html">
+        <li class="chapter active" data-level="1.4.3" data-path="typescript.html">
             
                 <a href="typescript.html">
             
@@ -487,7 +468,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="nodejs.html">
+        <li class="chapter " data-level="1.4.4" data-path="nodejs.html">
             
                 <a href="nodejs.html">
             
@@ -500,7 +481,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="算法.html">
+        <li class="chapter " data-level="1.4.5" data-path="算法.html">
             
                 <a href="算法.html">
             
@@ -513,7 +494,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="数据结构.html">
+        <li class="chapter " data-level="1.4.6" data-path="数据结构.html">
             
                 <a href="数据结构.html">
             
@@ -820,15 +801,16 @@ interface SearchFunc {
 }
 </code></pre></li>
 <li>&#x53EF;&#x7D22;&#x5F15;&#x7684;&#x7C7B;&#x578B;
-```
+```js
 interface SquareConfig {
 color: string;
 [index: number]: string;//&#x5F53;&#x7528; number&#x53BB;&#x7D22;&#x5F15;StringArray&#x65F6;&#x4F1A;&#x5F97;&#x5230;string&#x7C7B;&#x578B;&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
 </ul>
 <p>}
-//&#x6570;&#x5B57;&#x7D22;&#x5F15;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7D22;&#x5F15;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x5B50;&#x7C7B;&#x578B;</p>
+&#x6570;&#x5B57;&#x7D22;&#x5F15;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7D22;&#x5F15;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x5B50;&#x7C7B;&#x578B;</p>
 <pre><code>* &#x7C7B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;
-</code></pre><p>interface ClockInterface {
+```js
+interface ClockInterface {
     currentTime: Date;
     setTime(d: Date);
 }
@@ -862,105 +844,107 @@ class AnalogClock implements ClockInterface {
     }
 }
 let digital = createClock(DigitalClock, 12, 17);
-let analog = createClock(AnalogClock, 7, 32);</p>
-<pre><code>* &#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;&#xFF08;&#x53EF;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#xFF09;
-</code></pre><p>interface Shape {
-    color: string;
+let analog = createClock(AnalogClock, 7, 32);
+</code></pre><ul>
+<li>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x63A5;&#x53E3;&#xFF08;&#x53EF;&#x7EE7;&#x627F;&#x591A;&#x4E2A;&#xFF09;<pre><code class="lang-js">interface Shape {
+  color: string;
 }
 interface PenStroke {
-    penWidth: number;
+  penWidth: number;
 }
 interface Square extends Shape, PenStroke {
-    sideLength: number;
+  sideLength: number;
 }
-let square = <square>{};
+<span class="hljs-keyword">let</span> square = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Square</span>&gt;</span>{};
 square.color = &quot;blue&quot;;
 square.sideLength = 10;
-square.penWidth = 5.0;</square></p>
-<pre><code>* &#x6DF7;&#x5408;&#x7C7B;&#x578B;
-</code></pre><p>//&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x505A;&#x4E3A;&#x51FD;&#x6570;&#x548C;&#x5BF9;&#x8C61;&#x4F7F;&#x7528;
+square.penWidth = 5.0;
+</span></code></pre>
+</li>
+<li>&#x6DF7;&#x5408;&#x7C7B;&#x578B;<pre><code>//&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x505A;&#x4E3A;&#x51FD;&#x6570;&#x548C;&#x5BF9;&#x8C61;&#x4F7F;&#x7528;
 interface Counter {
-    (start: number): string;
-    interval: number;
-    reset(): void;
+  (start: number): string;
+  interval: number;
+  reset(): void;
 }
 function getCounter(): Counter {
-    let counter = <counter>function (start: number) { };
-    counter.interval = 123;
-    counter.reset = function () { };
-    return counter;
+  let counter = &lt;Counter&gt;function (start: number) { };
+  counter.interval = 123;
+  counter.reset = function () { };
+  return counter;
 }
 let c = getCounter();
 c(10);
 c.reset();
-c.interval = 5.0;</counter></p>
-<pre><code>* &#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;
-</code></pre><p>//&#x5F53;&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x4E86;&#x4E00;&#x4E2A;&#x7C7B;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x7EE7;&#x627F;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x4F46;&#x4E0D;&#x5305;&#x62EC;&#x5176;&#x5B9E;&#x73B0;&#x3002; &#x5C31;&#x597D;&#x50CF;&#x63A5;&#x53E3;&#x58F0;&#x660E;&#x4E86;&#x6240;&#x6709;&#x7C7B;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x4E00;&#x6837;&#x3002; &#x63A5;&#x53E3;&#x540C;&#x6837;&#x4F1A;&#x7EE7;&#x627F;&#x5230;&#x7C7B;&#x7684;private&#x548C;protected&#x6210;&#x5458;
+c.interval = 5.0;
+</code></pre></li>
+<li>&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x7C7B;<pre><code>//&#x5F53;&#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x4E86;&#x4E00;&#x4E2A;&#x7C7B;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x7EE7;&#x627F;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x4F46;&#x4E0D;&#x5305;&#x62EC;&#x5176;&#x5B9E;&#x73B0;&#x3002; &#x5C31;&#x597D;&#x50CF;&#x63A5;&#x53E3;&#x58F0;&#x660E;&#x4E86;&#x6240;&#x6709;&#x7C7B;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x4E00;&#x6837;&#x3002; &#x63A5;&#x53E3;&#x540C;&#x6837;&#x4F1A;&#x7EE7;&#x627F;&#x5230;&#x7C7B;&#x7684;private&#x548C;protected&#x6210;&#x5458;
 class Control {
-    private state: any;
+  private state: any;
 }
 interface SelectableControl extends Control {
-    select(): void;
+  select(): void;
 }
 class Button extends Control implements SelectableControl {
-    select() { }
+  select() { }
 }
 class TextBox extends Control {
-    select() { }
+  select() { }
 }
 // &#x9519;&#x8BEF;&#xFF1A;&#x201C;Image&#x201D;&#x7C7B;&#x578B;&#x7F3A;&#x5C11;&#x201C;state&#x201D;&#x5C5E;&#x6027;&#x3002;
 class Image implements SelectableControl {
-    select() { }
-}</p>
-<pre><code>#### &#x7C7B;
-* &#x7EE7;&#x627F;
-* &#x516C;&#x5171;&#xFF0C;&#x79C1;&#x6709;&#x4E0E;&#x53D7;&#x4FDD;&#x62A4;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#xFF08;public&#x3001;private&#x3001;protected&#xFF09;
-* &#x9759;&#x6001;&#x5C5E;&#x6027;
-* &#x62BD;&#x8C61;&#x7C7B;&#xFF08;abstract&#xFF09;&#xFF1A;&#x62BD;&#x8C61;&#x7C7B;&#x4E2D;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x4E0D;&#x5305;&#x542B;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0;
-#### &#x51FD;&#x6570;
-* &#x91CD;&#x8F7D;&#xFF1A;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x6765;&#x8FDB;&#x884C;&#x51FD;&#x6570;&#x91CD;&#x8F7D;
-#### &#x6CDB;&#x578B;
-*&#x4F7F;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x4E0E;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x76F8;&#x540C;&#x7684;
-</code></pre><p>function identity<t>(arg: T): T {
-    return arg;
+  select() { }
 }
-let output = identity<string>(&quot;myString&quot;);
-let output = identity(&quot;myString&quot;);//&#x7C7B;&#x578B;&#x63A8;&#x8BBA;</string></t></p>
-<pre><code>* &#x6CDB;&#x578B;&#x51FD;&#x6570;
-</code></pre><p>function identity<t>(arg: T): T {
-    return arg;
+</code></pre><h4 id="&#x7C7B;">&#x7C7B;</h4>
+</li>
+<li>&#x7EE7;&#x627F;</li>
+<li>&#x516C;&#x5171;&#xFF0C;&#x79C1;&#x6709;&#x4E0E;&#x53D7;&#x4FDD;&#x62A4;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#xFF08;public&#x3001;private&#x3001;protected&#xFF09;</li>
+<li>&#x9759;&#x6001;&#x5C5E;&#x6027;</li>
+<li>&#x62BD;&#x8C61;&#x7C7B;&#xFF08;abstract&#xFF09;&#xFF1A;&#x62BD;&#x8C61;&#x7C7B;&#x4E2D;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x4E0D;&#x5305;&#x542B;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0;<h4 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h4>
+</li>
+<li>&#x91CD;&#x8F7D;&#xFF1A;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x6765;&#x8FDB;&#x884C;&#x51FD;&#x6570;&#x91CD;&#x8F7D;<h4 id="&#x6CDB;&#x578B;">&#x6CDB;&#x578B;</h4>
+*&#x4F7F;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x4E0E;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x76F8;&#x540C;&#x7684;<pre><code>function identity&lt;T&gt;(arg: T): T {
+  return arg;
 }
-let myIdentity: <t>(arg: T) =&gt; T = identity;
-let myIdentity: {<t>(arg: T): T} = identity;</t></t></t></p>
-<pre><code>* &#x6CDB;&#x578B;&#x7C7B;
-</code></pre><p>class GenericNumber<t> {
-    zeroValue: T;
-    add: (x: T, y: T) =&gt; T;
+let output = identity&lt;string&gt;(&quot;myString&quot;);
+let output = identity(&quot;myString&quot;);//&#x7C7B;&#x578B;&#x63A8;&#x8BBA;
+</code></pre></li>
+<li>&#x6CDB;&#x578B;&#x51FD;&#x6570;<pre><code>function identity&lt;T&gt;(arg: T): T {
+  return arg;
 }
-let myGenericNumber = new GenericNumber<number>();
+let myIdentity: &lt;T&gt;(arg: T) =&gt; T = identity;
+let myIdentity: {&lt;T&gt;(arg: T): T} = identity;
+</code></pre></li>
+<li>&#x6CDB;&#x578B;&#x7C7B;<pre><code>class GenericNumber&lt;T&gt; {
+  zeroValue: T;
+  add: (x: T, y: T) =&gt; T;
+}
+let myGenericNumber = new GenericNumber&lt;number&gt;();
 myGenericNumber.zeroValue = 0;
-myGenericNumber.add = function(x, y) { return x + y; };</number></t></p>
-<pre><code>#### &#x7C7B;&#x578B;&#x517C;&#x5BB9;&#x6027;
-</code></pre><pre><code>#### &#x9AD8;&#x7EA7;&#x7C7B;&#x578B;
-* &#x4EA4;&#x53C9;&#x7C7B;&#x578B;&#xFF1A;&#x5C06;&#x591A;&#x4E2A;&#x7C7B;&#x578B;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x9700;&#x7684;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x7528;&#x7AD6;&#x7EBF;&#xFF08; &amp; &#xFF09;&#x5206;&#x9694;&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;
-* &#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF1A;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x4E4B;&#x4E00;&#xFF0C;&#x7528;&#x7AD6;&#x7EBF;&#xFF08; | &#xFF09;&#x5206;&#x9694;&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;
-* &#x7C7B;&#x578B;&#x522B;&#x540D;&#xFF1A;&#xFF08;&#x5BF9;&#x6BD4;&#x63A5;&#x53E3;&#xFF0C;&#x7528;&#x4E8E;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x6216;&#x5143;&#x7956;&#x7C7B;&#x578B;&#xFF09;
-</code></pre><p>type Name = string;
+myGenericNumber.add = function(x, y) { return x + y; };
+</code></pre><h4 id="&#x7C7B;&#x578B;&#x517C;&#x5BB9;&#x6027;">&#x7C7B;&#x578B;&#x517C;&#x5BB9;&#x6027;</h4>
+<code>
+</code><h4 id="&#x9AD8;&#x7EA7;&#x7C7B;&#x578B;">&#x9AD8;&#x7EA7;&#x7C7B;&#x578B;</h4>
+</li>
+<li>&#x4EA4;&#x53C9;&#x7C7B;&#x578B;&#xFF1A;&#x5C06;&#x591A;&#x4E2A;&#x7C7B;&#x578B;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x9700;&#x7684;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x7528;&#x7AD6;&#x7EBF;&#xFF08; &amp; &#xFF09;&#x5206;&#x9694;&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;</li>
+<li>&#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF1A;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x4E4B;&#x4E00;&#xFF0C;&#x7528;&#x7AD6;&#x7EBF;&#xFF08; | &#xFF09;&#x5206;&#x9694;&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;</li>
+<li>&#x7C7B;&#x578B;&#x522B;&#x540D;&#xFF1A;&#xFF08;&#x5BF9;&#x6BD4;&#x63A5;&#x53E3;&#xFF0C;&#x7528;&#x4E8E;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x6216;&#x5143;&#x7956;&#x7C7B;&#x578B;&#xFF09;<pre><code>type Name = string;
 type NameResolver = () =&gt; string;
-type NameOrResolver = Name | NameResolver;</p>
-<pre><code>#### Symbols
-</code></pre><pre><code>#### &#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;&#xFF08;for..of &#x3001;for..in &#xFF09;
-</code></pre><pre><code>#### &#x6A21;&#x5757;
-</code></pre><pre><code>#### &#x547D;&#x540D;&#x7A7A;&#x95F4;
-</code></pre><pre><code>#### &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x548C;&#x6A21;&#x5757;
-</code></pre><pre><code>#### &#x6A21;&#x5757;&#x89E3;&#x6790;
-</code></pre><pre><code>#### &#x58F0;&#x660E;&#x5408;&#x5E76;
-</code></pre><pre><code>#### JSX
-</code></pre><pre><code>#### &#x88C5;&#x9970;&#x5668;
-</code></pre><pre><code>#### Mixins
-</code></pre><pre><code>#### &#x4E09;&#x659C;&#x6746;&#x6307;&#x4EE4;
-</code></pre><pre><code>#### JavaScript&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x68C0;&#x67E5;
-</code></pre><p>```</p>
+type NameOrResolver = Name | NameResolver;
+</code></pre><h4 id="symbols">Symbols</h4>
+<h4 id="&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;&#xFF08;forof-&#x3001;forin-&#xFF09;">&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x751F;&#x6210;&#x5668;&#xFF08;for..of &#x3001;for..in &#xFF09;</h4>
+<h4 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h4>
+<h4 id="&#x547D;&#x540D;&#x7A7A;&#x95F4;">&#x547D;&#x540D;&#x7A7A;&#x95F4;</h4>
+<h4 id="&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x548C;&#x6A21;&#x5757;">&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x548C;&#x6A21;&#x5757;</h4>
+<h4 id="&#x6A21;&#x5757;&#x89E3;&#x6790;">&#x6A21;&#x5757;&#x89E3;&#x6790;</h4>
+<h4 id="&#x58F0;&#x660E;&#x5408;&#x5E76;">&#x58F0;&#x660E;&#x5408;&#x5E76;</h4>
+<h4 id="jsx">JSX</h4>
+<h4 id="&#x88C5;&#x9970;&#x5668;">&#x88C5;&#x9970;&#x5668;</h4>
+<h4 id="mixins">Mixins</h4>
+<h4 id="&#x4E09;&#x659C;&#x6746;&#x6307;&#x4EE4;">&#x4E09;&#x659C;&#x6746;&#x6307;&#x4EE4;</h4>
+<h4 id="javascript&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x68C0;&#x67E5;">JavaScript&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</h4>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -988,7 +972,7 @@ type NameOrResolver = Name | NameResolver;</p>
 
             
                 
-                <a href="react/r1.html" class="navigation navigation-prev " aria-label="Previous page: JSX深度">
+                <a href="vue.html" class="navigation navigation-prev " aria-label="Previous page: Vue">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1004,7 +988,7 @@ type NameOrResolver = Name | NameResolver;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Typescript","level":"1.4.2","depth":2,"next":{"title":"Nodejs","level":"1.4.3","depth":2,"path":"doc/extend/nodejs.md","ref":"doc/extend/nodejs.md","articles":[]},"previous":{"title":"JSX深度","level":"1.4.1.1","depth":3,"path":"doc/extend/react/r1.md","ref":"doc/extend/react/r1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/extend/typescript.md","mtime":"2019-03-18T01:14:21.682Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-19T06:19:45.959Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Typescript","level":"1.4.3","depth":2,"next":{"title":"Nodejs","level":"1.4.4","depth":2,"path":"doc/extend/nodejs.md","ref":"doc/extend/nodejs.md","articles":[]},"previous":{"title":"Vue","level":"1.4.2","depth":2,"path":"doc/extend/vue.md","ref":"doc/extend/vue.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/extend/typescript.md","mtime":"2019-05-24T12:28:03.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T12:38:44.527Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

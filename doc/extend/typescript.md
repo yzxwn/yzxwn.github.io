@@ -144,16 +144,16 @@ interface SearchFunc {
 }
 ```
 * 可索引的类型
-```
+```js
 interface SquareConfig {
   color: string;
   [index: number]: string;//当用 number去索引StringArray时会得到string类型的返回值
   [propName: string]: any;//任意数量的其它属性
 }
-//数字索引的返回值必须是字符串索引返回值类型的子类型
+数字索引的返回值必须是字符串索引返回值类型的子类型
 ```
 * 类实现接口
-```
+```js
 interface ClockInterface {
     currentTime: Date;
     setTime(d: Date);
@@ -191,7 +191,7 @@ let digital = createClock(DigitalClock, 12, 17);
 let analog = createClock(AnalogClock, 7, 32);
 ```
 * 接口继承接口（可继承多个）
-```
+```js
 interface Shape {
     color: string;
 }
@@ -292,38 +292,14 @@ type NameResolver = () => string;
 type NameOrResolver = Name | NameResolver;
 ```
 #### Symbols
-```
-```
 #### 迭代器和生成器（for..of 、for..in ）
-```
-```
 #### 模块
-```
-```
 #### 命名空间
-```
-```
 #### 命名空间和模块
-```
-```
 #### 模块解析
-```
-```
 #### 声明合并
-```
-```
 #### JSX
-```
-```
 #### 装饰器
-```
-```
 #### Mixins
-```
-```
 #### 三斜杆指令
-```
-```
 #### JavaScript文件类型检查
-```
-```

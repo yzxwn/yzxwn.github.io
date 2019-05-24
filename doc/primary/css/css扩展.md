@@ -7,15 +7,7 @@
 
 
 [css](https://juejin.im/tag/CSS)
-* css-doodle：制作Web图案的组件
-* X-Tag：开源的JavaScript库，封装了W3C标准Web组件家族的api，为组件开发提供了一个紧凑的、功能丰富的接口
-* Web Components：提供一整套完善的封装机制来把 Web 组件化这个东西标准化，每个框架实现的组件都统一标准地进行输入输出，这样可以更好推动组件的复用
-```
-Custom Elements：自定义 HTML 元素
-HTML Imports：一种在 HTMLs 中引用以及复用其他的 HTML 文档的方式
-HTML Templates：提供了一个 template 标签来存放以后需要但是暂时不渲染的 HTML 代码
-Shadow DOM：隔离组件代码作用域，编写独立的组件
-```
+
 
 #### css权重
 * 权重规则：

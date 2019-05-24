@@ -5,8 +5,7 @@
 * [介绍](README.md)
 
 * 笔记
-    * [参考链接](doc/note/参考链接.md)
-    * [技术背景](doc/note/技术背景.md)
+    * [学习链接](doc/note/学习链接.md)
     * [知识扩展](doc/note/知识扩展.md)
     * [心迹](doc/note/心迹.md)
 
@@ -29,8 +28,8 @@
     * [Ajax](doc/primary/Ajax.md)
 
 * 扩展技术
-    * React
-        * [JSX深度](doc/extend/react/r1.md)
+    * [React](doc/extend/react.md)
+    * [Vue](doc/extend/vue.md)
     * [Typescript](doc/extend/typescript.md)
     * [Nodejs](doc/extend/nodejs.md)
     * [算法](doc/extend/算法.md)

@@ -10,6 +10,7 @@
 * [元素距离顶部高度](#元素距离顶部高度)
 * [节流函数](#节流函数)
 * [深拷贝浅拷贝](#深拷贝浅拷贝)
+* [跨域/代理](#跨域/代理)
 
 * 纯函数：相同的输入，永远会得到相同的输出，而且没有任何可观察的副作用（Object.freeze()：冻结对象，无法冻结嵌套的对象）
 * 函数记忆：主要通过存储代价高的函数调用的结果，当需要执行同样的计算时直接返回已经缓存的结果，来加速计算机程序运行
@@ -411,6 +412,7 @@ function fn() {
 }
 const action = debounce(fn, 2000);
 ```
+
 #### 深拷贝浅拷贝
 [文档](https://juejin.im/post/59ac1c4ef265da248e75892b)
 ```
@@ -426,4 +428,18 @@ const action = debounce(fn, 2000);
 引用类型的比较是引用的比较
 深拷贝：将 B 对象拷贝到 A 对象中，包括 B 里面的子对象
 浅拷贝：将 B 对象拷贝到 A 对象中，但不包括 B 里面的子对象
+```
+
+#### 跨域/代理
+```
+同源策略："协议+域名+端口"三者相同
+允许跨域加载资源：<img src=XXX>、<link href=XXX>、<script src=XXX>、<iframe src=XXX>
+//关闭同源策略：chrome.exe
+jsonp：使用<script>元素作为Ajax传输的技术称为JSONP，利用script标签可跨域的特点，在跨域脚本中可以直接回调当前脚本的函数，JSONP请求一定需要对方的服务器做支持才可以（响应数据是经过JSON编码的）
+cors：服务器设置HTTP响应头中Access-Control-Allow-Origin的值，解除跨域限制
+iframe：postMessage传递数据、window.name 传值、location.hash 传值、设置document.domain（只能用于二级域名相同的情况下）
+websocket：允许跨域通讯
+Node 中间件：代理服务器
+nginx：高性能的HTTP和反向代理服务器，可以顺便修改 cookie 信息
+proxy：webpack配置代理
 ```

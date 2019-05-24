@@ -400,6 +400,8 @@ npm config set registry registry.npmjs.org
 //错误You do not have permission to publish "npmtest". Are you logged in as the correct user?(包名重复)
 //切换淘宝源
 npm install --registry https://registry.npm.taobao.org
+//初始化package.json
+npm init
 ```
 
 

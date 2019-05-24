@@ -353,6 +353,8 @@ find(fun):返回查找到的符合条件的第一个成员
 findIndex(fun):返回查找到的符合条件的第一个成员的位置
 fill(fun,startIndex,endIndex):填充，不包含endIndex
 includes(str):
+//创建非空定长数组
+Array.apply(null,{length:5})
 ```
 * 类数组
 ```
