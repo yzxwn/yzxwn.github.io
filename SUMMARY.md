@@ -7,7 +7,7 @@
 * 笔记
     * [学习链接](doc/note/学习链接.md)
     * [知识扩展](doc/note/知识扩展.md)
-    * [心迹](doc/note/心迹.md)
+    * [摘录](doc/note/摘录.md)
 
 * 基础技术
     * Css
@@ -44,5 +44,3 @@
     * [Svn](doc/tool/Svn.md)
     * [Webpack4](doc/tool/Webpack4.md)
 
-
-* [文档教程](https://blog.csdn.net/u012067966/article/details/50736647)
