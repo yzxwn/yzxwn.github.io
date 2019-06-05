@@ -2,6 +2,14 @@
 
 [原文](https://webpack.js.org)
 
+```
+webpack：静态模块打包器，整理资源
+    javascript、css等编译、打包、分割
+    图片等资源处理（雪碧图、base64）
+    webpack-dev-server热更新等帮助开发的工具
+    tree-shaking去除不用的代码等优化javascript工具
+```
+
 * **Entry Points：入口**
 ```js
 //单一条目（速记）语法: entry: string|Array<string>
@@ -401,7 +409,7 @@ npm config set registry registry.npmjs.org
 //切换淘宝源
 npm install --registry https://registry.npm.taobao.org
 //初始化package.json
-npm init
+npm init -y
 ```
 
 
