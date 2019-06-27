@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>备忘录01</title>
+</head>
+<body>
+<pre>
+    程序员：
+        * 需要学习的是编程思想，而不是编程语言
+        * 不做github的搬运工，要自己创造代码（使用自己开发的框架，而不是 api 的使用者）
+        * 学习的毅力，推动团队进步，乐于分享
+        * 一个真正有价值的程序员不仅需要自身工作能力强，还需要能帮助伙伴使团队增强工作能力
+    工作：
+        * 专注于技术的研究和能力的提升，与项目团队一起进步
+        * 必须完成的事会有压力，想要完成的事才有动力
+        * 兴趣支撑不起工作，责任感才能让人保持对工作的热情
+        * 比起写，代码更多地是给人看的
+    公司：
+        * 有进步发展空间，在一个良好的工作环境中养成良好的工作习惯
+        * 花时间和精力去培养公司员工的自身技术和工作能力
+        * 对于过时代码或者临时应急的解决方案后期会有一些处理方案
+        * 进行code review，除了监控进度，还要管理代码质量
+    特点：
+        * 做自己想做的事，做影响未来的事，好奇是知识的萌芽
+        * 想奋斗是不服输，想安稳是输不起
+        * (和开朗活泼的人相处，和别人讨论问题，一起解决问题是很开心的事)
+    离职：
+        * 推动发展新技术 量化收益
+        * 不是我想离开那里，而是我想来这里
+        * 我很享受那里的时光，但是我想寻求新的挑战
+        * 不是为了生存，而是为了发展
+        * 个人职业发展，大公司自带光环（优秀的技术沉淀和管理制度），小公司成长快
+</pre>
+<ul>
+    <li>不知道换成自己的理解 如果以后的工作有需要会很快的去深入学习 这是我的理解，你的更深层次理解？学习到了，其他的问题？</li>
+    <li>对这块可能不是特别熟悉 还没有掌握好，对其他方面比较熟悉</li>
+</ul>
+<ul>
+    <li><a href="http://caibaojian.com/interview-map/">前端面试之道</a></li>
+    <li><a href="https://www.nowcoder.com/tutorial/96/">牛客网前端面试宝典</a></li>
+</ul>
+<details>
+    <summary>CSS:浏览器兼容性写法</summary>
+    <pre>
+       -webkit-：safari、chrome、
+        -moz-：firefox
+        -ms-：ie
+        -o-：Opera
+    </pre>
+</details>
+<details>
+    <summary>CSS:盒模型</summary>
+    <pre>
+        ie 盒模型：box-sizing: border-box;
+        标准 w3c 盒模型：box-sizing: content-box;
+    </pre>
+</details>
+<details>
+    <summary>CSS:伪类、伪元素、选择器三大特性</summary>
+    <pre>
+        伪类：link、visited、hover、active、focus、enabled、disabled、checked、selection、
+        伪元素：first-line、first-letter、before、after
+        CSS三大特性：
+            层叠性：多种CSS样式的叠加
+            继承性：子标签会继承上级标签的CSS样式属性（font、color、visibility、cursor）
+            优先级：
+                权重：权重相同时就近原则、声明靠后的优先级大
+                    规则：!important > 内联 > id > 类 > 标签 > 其他 > 继承
+                    效率：id > 类 > 标签 > 其他
+    </pre>
+</details>
+<details>
+    <summary>CSS:水平垂直居中</summary>
+    <pre>
+        flex justify-content align-items
+        absolute+transform:translate
+        table-cell+vertical-align: middle
+    </pre>
+</details>
+<details>
+    <summary>CSS:清除浮动的几种方式</summary>
+    <pre>
+        视觉格式化模型BFC、IFC、FFC、GFC
+        BFC触发条件：
+        1）html根元素
+        2）float的值为left或right
+        3）overflow的值为hidden或auto
+        4）position的值为absolute、fixed
+        5）display的值为inline-block、table-cell、table-caption
+    </pre>
+</details>
+<details>
+    <summary>CSS:css和js动画</summary>
+    <pre>
+        CSS动画：CSS3兼容性问题、流畅（transforms 和 opacity在合成器线程上处理）
+        JS动画：在主线程中运行导致阻塞、制作复杂动画
+        方案：创建单独的 CSS 类来管理动画，使用 JavaScript 切换每个动画的开启和关闭
+    </pre>
+</details>
+<details>
+    <summary>CSS:预处理器（Sass、Less）</summary>
+    <pre>
+        是一种动态样式语言. 对CSS赋予了动态语言的特性，如变量，继承，运算，函数
+        sass：用户多、跳出嵌套：@at-root .child {}、npm安装node-sass会失败
+        less：编程能力弱、不直接支持对象、循环、判断等
+    </pre>
+</details>
+<details>
+    <summary>CSS:em、rem</summary>
+    <pre>
+        em：相对父级元素的字体大小
+        rem：相对根元素的字体大小
+    </pre>
+</details>
+<details>
+    <summary>CSS:css3</summary>
+    <pre>
+        静默特点：遇见陌生的东西不报错
+        border：border-radius box-shadow border-image
+        background：background-size background-origin
+        transform 变形：
+        transition 过渡：
+        animation 动画：
+        盒模型：box-sizing
+    </pre>
+</details>
+<details>
+    <summary>CSS:cssnext</summary>
+    <pre>
+        CSS未来语法
+        自定义变量：定义:root{} 使用var()
+    </pre>
+</details>
+<details>
+    <summary>HTML:Web语义化</summary>
+    <pre>
+        使用恰当语义的html标签、class类名等内容，让页面具有良好的结构与含义
+        有利于 SEO 搜索引擎
+    </pre>
+</details>
+<details>
+    <summary>HTML:HTML5</summary>
+    <pre>
+        不是html的新版本，而是包含html、CSS、Javascript、浏览器的一整套API，简称H5（在移动端兼容性比PC好）
+        新的结构化标签：header footer nav section main article aside
+        新的语义标签：address code details|summary template
+        新表单：input(type 正则)
+        新的本地存储：localStorage|sessionStorage
+        webSocket：实时连接
+        多媒体标签：audio、video
+        画布Canvas、支持内联SVG
+        Web Worker（运行在后台的 JavaScript，不会影响页面的性能）
+    </pre>
+</details>
+<details>
+    <summary>JS:几种跨域方式</summary>
+    <pre>
+        同源："协议+域名+端口"三者相同，一种安全策略
+        解决方案：
+            jsonp：利用script标签可跨域的特点，在跨域脚本中可以直接回调当前脚本的函数（需要对方的服务器做支持、仅支持 get 方法、可能会遭受 XSS 攻击）
+            cors：服务端设置 Access-Control-Allow-Origin
+            postMessage：允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递
+            websocket：允许跨域通讯，浏览器与服务器的全双工通信
+            node中间件：代理服务器，服务器向服务器请求就无需遵循同源策略
+            nginx反向代理：反向代理服务器，支持所有浏览器，可以顺便修改 cookie 信息（最简单的跨域方式）
+            iframe + window.name：name 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）
+            iframe + location.hash：不同域之间利用 iframe 的 location.hash 传值，相同域之间直接 js 访问来通信
+            iframe + document.domain：两个页面都通过 js 强制设置 document.domain 为基础主域（只能用于二级域名相同的情况下）
+    </pre>
+</details>
+<details>
+    <summary>JS:几种本地存储方案</summary>
+    <pre>
+        cookie（4KB）：服务端脚本可以读写存储在客户端的cookie值（有效期：默认-浏览器进程关闭之前，作用域：默认-同目录或其子目录）
+        Web存储（2.5MB-10MB）：localStorage（有效期：永久性，作用域：同浏览器同源文档共享，iframe做localStorage扩容）、sessionStorage（有效期：浏览器页面关闭之前-可恢复，作用域：顶级窗口共享）
+        HTML5-离线缓存（Application Cache）：解析缓存清单文件manifest，只从服务器下载更新过的资源，其他文件像cookie一样被存储下来
+        Servers Work:更新Cache Storage、代理服务器拦截请求、非主线程、异步、https、postMessage与主窗口通信
+        客户端数据库（IndexedDB）：对象数据库（同源页面共享）
+        Web SQL
+        Redis
+    </pre>
+</details>
+<details>
+    <summary>JS:原生Ajax</summary>
+    <pre>
+        1）创建一个XMLHttpRequest对象：
+        new XMLHttpRequest()
+        IE6：new ActiveXObject("Microsoft.XMLHTTP")
+        2）配置请求信息：请求的方式、路径、是否异步
+            xhr.open("POST","/try/ajax/demo_post2.php",true)
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+        3）发送请求：
+            xhr.send("fname=Zhou&lname=minghang")
+        4）监听状态变化，执行相应回调函数：
+            xhr.onreadystatechange=function()
+            {
+                if (xhr.readyState==4 && xhr.status==200){
+                    console.log(xhr.responseText);
+                }else{
+                     console.log('失败');
+                }
+            }
+        GET与POST的区别：GET更快、有缓存、明文传输不安全、使用小文件、send不传参，POST没有数据量限制、必须传参
+    </pre>
+</details>
+<details>
+    <summary>JS:内置类型、基本数据类型</summary>
+    <pre>
+        内置类型：基本类型（Number String Boolean Null Undefined Symbol）、对象（Object）
+    </pre>
+</details>
+<details>
+    <summary>JS:判断数据类型</summary>
+    <pre>
+        typeof：可以测试出基本类型（除null为object）、object、function、array（object）
+        instanceof：判断对象的原型链中是不是能找到该类型的 prototype。不能区别undefined和null，对于基本类型如果不是用new声明的也测试不出来，对于是使用new声明的类型，它还可以检测出多层继承关系
+        constructor：undefined和null没有contructor属性，并且使用它是不安全的，因为contructor的指向是可以改变的
+        Object.prototype.toString.call | toString.call：[object Type]，不能检测非原生构造函数的构造函数名，toString全局方法可能被重写
+    </pre>
+</details>
+<details>
+    <summary>JS:类型转换</summary>
+    <pre>
+        条件判断：undefined null false NaN "" 0 -0 为false
+        对象转基本类型：先 valueOf 后 toString，可重写，重写Symbol.toPrimitive优先级最高
+        四则运算符：加法（一方是字符串就转字符串，将对象转为原始值），其他（一方是数字就转数字）
+        == 操作符：
+    </pre>
+</details>
+<details>
+    <summary>JS:原型、原型链、new</summary>
+    <pre>
+        每个函数的 prototype 属性指向原型
+        每个对象的 __proto__ 属性指向创建该对象的构造函数的原型
+        对象可以通过 __proto__ 来寻找不属于该对象的属性，__proto__ 将对象连接起来组成了原型链
+        描述new一个对象的详细过程：创建一个新对象，新对象的原型指向构造函数的原型，改变构造器函数的this指向为新对象和传参，返回新对象
+        手动实现一个new操作符：（new是用来做继承的，可以访问到原型中的方法，可以访问到构造函数里的属性）
+            function create() {
+                const obj = {}, Con = [].shift.call(arguments);
+                obj.__proto__ = Con.prototype;
+                const result = Con.apply(obj, arguments);
+                return typeof result === "object" ? result : obj;
+            }
+    </pre>
+</details>
+<details>
+    <summary>JS:继承</summary>
+    <pre>
+
+    </pre>
+</details>
+<details>
+    <summary>JS:this、闭包</summary>
+    <pre>
+        this：谁调用它，this就指向谁
+            全局环境下（定时器，回调函数）this：window，严格模式undefined
+            箭头函数的this：默认绑定外层非箭头函数this的值
+            构造函数的this：每个构造函数在new之后都会返回一个对象，这个对象就是this
+        闭包的实现原理和作用，可以列举几个开发中闭包的实际应用：
+            闭包：有权访问另一个函数作用域中的变量的函数（内部函数被保存到外部）
+            闭包是指的什么：函数A返回使用了A内部变量的函数B，导致内外都持有数据的访问权，函数里面拥有的一块独立的内存空间永远存在且对外是封闭的，所以称为闭包
+            作用：
+                1.在外部获取函数体内部的局部变量
+                2.维持函数中的局部变量在内存中不被销毁，可能造成内存泄漏
+                3.避免全局冲突，防止污染，保证内部变量的安全
+            实际应用：函数节流防抖、设计单例模式、设置私有变量
+    </pre>
+</details>
+<details>
+    <summary>JS:深浅拷贝</summary>
+    <pre>
+        浅拷贝：Object.assign、展开运算符（…）（只拷贝第一层）
+        深拷贝：JSON.parse(JSON.stringify(object))（会忽略 undefined、symbol、不能序列化函数、不能解决循环引用的对象）
+    </pre>
+</details>
+<details>
+    <summary>JS:防抖、节流</summary>
+    <pre>
+        防抖：每次触发函数的间隔小于wait，只调用一次
+        节流：每隔一定时间（参数wait）调用函数
+    </pre>
+</details>
+<details>
+    <summary>JS:执行上下文、作用域</summary>
+    <pre>
+        执行上下文：第一个阶段创建 VO（JS 解释器会找出需要提升的变量和函数，并且给他们提前在内存中开辟好空间，函数的话会将整个函数存入内存中，变量只声明并且赋值为 undefined），第二个阶段代码执行（可以直接提前使用）
+        词法（静态）作用域：函数的作用域在函数定义的时候就决定了（javascript）
+        动态作用域：函数的作用域是在函数调用的时候才决定的
+        作用域链：包含自身变量对象和上级变量对象的列表
+    </pre>
+</details>
+<details>
+    <summary>JS:模块化</summary>
+    <pre>
+        有 Babel 的情况下，可以直接使用 ES6 的模块化（export|export default，import）
+        CommonJs 是 Node 独有的规范，浏览器中使用就需要用到 Browserify 解析（module.exports，require）
+        AMD 是由 RequireJS 提出的
+    </pre>
+</details>
+<details>
+    <summary>JS:堆栈溢出、内存泄漏、垃圾回收</summary>
+    <pre>
+        栈：空间小、大小固定，存储基本类型（Undefined、Null、Boolean、Number、String）
+        堆：空间大、大小不固定，存储引用类型（Object、Array、Function）
+        堆栈溢出：没有足够的内存空间供其使用
+        内存泄漏：不再用到的内存，没有及时释放
+        解决方案：尽量不定义全局变量、用匿名自执行函数把全局变成局部、释放不再用到的变量、避免使用闭包
+        垃圾回收机制：引用计数、标记清除
+    </pre>
+</details>
+<details>
+    <summary>JS:字符串、数组、对象常用API、类数组转换成数组</summary>
+    <pre>
+        字符串：split indexOf replace slice substring substr match search
+        对象：assign defineProperty keys freeze
+        数组：join unshift shift push pop slice splice reverse sort
+        类数组转换成数组：Array.prototype.slice.call()、Array.from()、扩展运算符（…）
+    </pre>
+</details>
+<details>
+    <summary>JS:执行机制 Event Loop</summary>
+    <pre>
+        为何try里面放return，finally还会执行，理解其内部机制：先执行finally，再执行return，若finally里有return则不执行try里的return
+        描述EventLoop机制：挂起异步操作，执行同步任务（当一个任务队列执行结束后，当当前的微任务队列为空时，再去执行宏任务队列中的任务），执行异步任务
+        宏任务和微任务分别有哪些：
+            宏任务：new Promise、异步任务（setTimeout、setInterval、ajax）、click、渲染html文档
+            微任务：promise.then、catch、finally、MutationObserver
+        Node与浏览器EventLoop的差异：将不同的任务分配给不同的线程，形成一个事件循环，以异步的方式将任务的执行结果返回给V8引擎
+        如何在保证页面运行流畅的情况下处理海量数据：利用setTimeout将任务放入事件队列,等待js引擎空闲后被执行
+    </pre>
+</details>
+<details>
+    <summary>ES6:ES6、ES7、ES8</summary>
+    <pre>
+        新版本JavaScript语言的标准
+        ES6：类、模块化、箭头函数、函数参数默认值、模板字符串、解构赋值、延展操作符、对象属性简写、Promise、支持let与const
+        ES7：Array.prototype.includes()、指数操作符
+        ES8：async/await、Object.values()、Object.entries、String.prototype.padStart和String.prototype.padEnd、函数参数列表结尾允许逗号、Object.getOwnPropertyDescriptors()
+    </pre>
+</details>
+<details>
+    <summary>ES6:字符串、数组、对象、变量、函数扩展的API</summary>
+    <pre>
+        字符串：模板字符串、includes、startsWith|endsWidth、repeat、padStart|padEnd、trimStart|trimEnd、matchAll
+        数组：扩展运算符、Array.from Array.of copyWithin find findIndex fill entries|keys|values includes flat|flatMap
+            forEach(), filter(), reduce(), every() 和some()都会跳过空位
+            map()会跳过空位，但会保留这个值
+            join()和toString()会将空位视为undefined，而undefined和null会被处理成空字符串
+        对象：属性的简洁表示法、属性名表达式、super 关键字、Object.keys()
+        变量：let、const，块级作用域，解构赋值
+        函数：箭头函数、默认参数、rest参数
+    </pre>
+</details>
+<details>
+    <summary>ES6:let、const</summary>
+    <pre>
+        1）块级作用域
+        2）不存在变量提升
+        3）暂时性死区：块级作用域内，声明的变量会绑定这个区域，声明变量之前不能使用该变量
+        4）不允许重复声明（相同作用域内）
+        5）const 声明的变量必须提供一个初始值，而且会被认为是常量（变量指向的内存地址不能改变）
+        6）let、const、class 声明的全局变量不属于顶层对象（window/global）的属性
+    </pre>
+</details>
+<details>
+    <summary>ES6:Symbol的使用</summary>
+    <pre>
+        充当唯一的对象键、作为半私有属性键、避免名称冲突
+    </pre>
+</details>
+<details>
+    <summary>ES6:set和map数据结构</summary>
+    <pre>
+        Set（集合）：由一组无序且唯一的项组成的
+            size、add(value)、delete(value)、has(value)、clear()、keys()、values()、entries()、forEach()
+            WeakSet：成员只能是对象，其中的对象都是弱引用
+        Map（字典）：用于存储数据，提供了“值—值”的对应
+            size、set(key,value)、get(key)、delete(key)、has(key)、clear()、keys()、values()、entries()、forEach()
+            WeakMap：只接受对象作为键名，键名所指向的对象不计入垃圾回收机制
+    </pre>
+</details>
+<details>
+    <summary>ES6:Promise</summary>
+    <pre>
+        解决了回调地狱的问题
+        可以把 Promise 看成一个状态机。初始是 pending 状态，可以通过函数 resolve 和 reject ，将状态转变为 resolved 或者 rejected 状态，状态一旦改变就不能再次变化
+        then 函数会返回一个 Promise 实例，并且该返回值是一个新的实例而不是之前的实例
+    </pre>
+</details>
+<details>
+    <summary>ES6:异步编程的解决方案</summary>
+    <pre>
+        1）回调函数：回调地狱，不利于阅读
+        2）Promise：使用.then方法解决了回调的问题，但代码依然冗余，且语义不强
+        3）Generator：yield暂停执行，看起来非常像同步的写法，需要手动.next来执行下一个操作
+        4）async：内置执行器，更好的语义（async代表异步，await代表等待），返回的是Promise
+    </pre>
+</details>
+<details>
+    <summary>ES6:class语法</summary>
+    <pre>
+        构造函数的语法糖
+        静态方法：static function
+        实例方法：function
+        静态属性：Class.propname 或者 static propname = value
+        实例属性：propname = value 或者 this.propname = value
+    </pre>
+</details>
+<details>
+    <summary>ES6:Map、FlatMap、Reduce</summary>
+    <pre>
+        Map 作用是生成一个新数组，遍历原数组，将每个元素拿出来做一些变换然后 append 到新的数组中，三个参数（当前索引元素，索引，原数组）
+        FlatMap 和 map 的作用几乎是相同的，但是对于多维数组来说，会将原数组降维
+        Reduce 作用是将数组中的值组合起来，最终得到一个值
+    </pre>
+</details>
+<details>
+    <summary>MVVM框架设计理念</summary>
+    <pre>
+        Model（数据：Javascript对象），View（视图：DOM），ViewModel（通讯：观察者）
+    </pre>
+</details>
+<details>
+    <summary>React:API、生命周期、HOC、refs、Hooks</summary>
+    <pre>
+        React.createElement(component, props, ...children)：JSX是该方法的语法糖
+        生命周期方法：挂载、更新、卸载
+            初始化：constructor()
+            挂载和更新：static getDerivedStateFromProps()
+            props和state更新：shouldComponentUpdate()
+            渲染：render()
+            渲染之后：getSnapshotBeforeUpdate()
+            挂载之后：componentDidMount()
+            更新之后：componentDidUpdate()
+            卸载之前：componentWillUnmount()
+            React16废弃：componentWillMount、componentWillReceiveProps、componentWillUpdate
+        高阶组件（HOC）：参数为组件，返回值为新组件的纯函数
+        refs：React.createRef()、回调 Refs、Refs 转发（React.forwardRef）
+        Hook：在不编写 class 的情况下使用 state 以及其他的 React 特性（无状态组件变成函数组件）
+            useState：在函数组件中添加 state
+            useEffect：在函数组件中执行副作用操作（componentDidMount、componentDidUpdate、componentWillUnmount）
+            规则：只在最顶层使用 Hook、只在 React 函数中调用 Hook
+            自定义Hook：将组件逻辑提取到可重用的函数中
+            复用一个有状态的组件太复杂、生命周期钩子函数里的逻辑太乱
+    </pre>
+</details>
+<details>
+    <summary>React:setState的执行机制，如何有效的管理状态</summary>
+    <pre>
+        形式：setState(object|function,[callback])
+        setState基本特点：
+            setState是同步执行的
+            setState在React生命周期和合成事件中批量覆盖执行，但是多次连续使用函数式的setState，React本身会进行一个递归传递调用，将上一次函数执行后的state传给下一个函数
+            setState在原生事件，setTimeout，setInterval，Promise等异步操作中，state会同步更新
+        state中应该只保存与渲染有关的状态
+    </pre>
+</details>
+<details>
+    <summary>React:事件机制</summary>
+    <pre>
+        React为什么要自己实现一个事件系统：性能优化（事件委托，对象池，批量更新）、复用（跨浏览器兼容，跨平台兼容）
+        React的事件系统是怎么运作起来的：将事件监听挂载在document上，并且构造合成事件，并且在内部模拟了一套捕获和冒泡并触发回调函数的机制，实现了自己一套事件系统
+    </pre>
+</details>
+<details>
+    <summary>React:虚拟DOM的内部实现、virtual dom 有哪些好处</summary>
+    <pre>
+        为何使用虚拟DOM：提高开发效率，在重复渲染时它帮助我们计算如何更高效的更新，跨浏览器兼容，跨平台兼容
+        Babel将JSX转换成createElement，createElement函数对props和传入的孩子节点进行处理，构造成一个ReactElement对象（虚拟DOM），ReactDOM.render将生成好的虚拟DOM渲染到指定容器上
+    </pre>
+</details>
+<details>
+    <summary>React:Diff算法的内部实现</summary>
+    <pre>
+        传统diff算法：通过循环递归对节点进行依次对比，效率低下，算法复杂度O(n^3)
+        React diff：复杂度O(n)
+        启发式算法：
+            两个不同类型的元素会产生出不同的树；
+            开发者可以通过 key prop 来暗示哪些子元素在不同的渲染下能保持稳定；
+        diff 策略：
+            tree diff：Web UI 中 DOM 节点跨层级的移动操作特别少，可以忽略不计
+            component diff：拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构
+            element diff：对于同一层级的一组子节点，它们可以通过唯一 id 进行区分
+                不同key会销毁和重建，相同key会更新
+                遍历新集合，判断老集合中是否存在相同的节点，插入新节点，当前节点在老集合中位置小于新集合时移动，遍历老集合删除不存在节点
+        列表使用 index 做 key，删除其中一个后，如何表现：更新前面节点，删除最后一个节点（id做key：删除不存在节点）
+        将最后一个节点移动到列表首部：移动除首部之外的所有节点
+    </pre>
+</details>
+<details>
+    <summary>React:Fiber工作原理、解决了什么问题</summary>
+    <pre>
+        问题：渲染/更新过程一旦开始无法中断，持续占用主线程，主线程忙于执行JS，无暇他顾（布局、动画），造成掉帧、延迟响应（甚至无响应）等不佳体验
+            React16 用了分片的方式解决问题（异步渲染）。就是把一个任务分成很多小片，当分配给这个小片的时间用尽的时候，就检查任务列表中有没有新的、优先级更高的任务，有就做这个新任务，没有就继续做原来的任务
+        Fiber：实现了自己的组件调用栈，它以链表的形式遍历组件树，可以灵活的暂停、继续和丢弃执行的任务
+            实现方式是使用了浏览器的requestIdleCallback这一 API
+    </pre>
+</details>
+<details>
+    <summary>Vue:语法</summary>
+    <pre>
+        //实例
+        new Vue({
+            el: DOM节点,
+            data: {动态数据},
+            filters: {过滤器名称:函数}, //可以全局定义过滤器
+            computed: {计算属性的getter}, //只在相关依赖发生改变时才会重新求值
+            methods: {事件方法},
+            watch:{侦听属性的回调方法}，
+            components: {局部组件名:局部组件},
+        })
+        //组件（全局注册）
+        Vue.component({
+            props: [父级属性]
+            template: DOM元素,
+            data: function(){return 动态数据},
+        })
+        //（局部注册）
+        var ComponentA = { /* ... */ }
+    </pre>
+</details>
+<details>
+    <summary>Vue:基本指令</summary>
+    <pre>
+        v-text v-html v-modal v-bind:key=value v-on:event=function v-for v-if v-show v-once
+    </pre>
+</details>
+<details>
+    <summary>Vue:生命周期</summary>
+    <pre>
+        created：实例创建完成，尚未挂载（初始化处理数据）
+        mounted：el挂载到实例（处理第一个业务逻辑）
+        beforeDestroy：实例销毁前（用于解绑监听事件）
+    </pre>
+</details>
+<details>
+    <summary>Vue:钩子函数、自定义指令</summary>
+    <pre>
+        钩子函数：
+            bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
+            inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
+            update：所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。
+            componentUpdated：指令所在组件的 VNode 及其子 VNode 全部更新后调用。
+            unbind：只调用一次，指令与元素解绑时调用
+        1）全局注册
+        // 注册一个全局自定义指令 `v-focus`
+        Vue.directive('focus', {
+          // 当被绑定的元素插入到 DOM 中时……
+          inserted: function (el) {
+            // 聚焦元素
+            el.focus()
+          }
+        })
+        2）局部注册
+        // 组件中也接受一个 directives 的选项
+        directives: {
+          focus: {
+            // 指令的定义
+            inserted: function (el) {
+              el.focus()
+            }
+          }
+    </pre>
+</details>
+<details>
+    <summary>Vue:插槽</summary>
+    <xmp>
+        <slot></slot>：子组件渲染父组件传入的内容
+        具名插槽：父<template slot="header"></template> 子<slot name="header"></slot>
+        作用域插槽（父访问子作用域）：父<template slot-scope="slotProps">{{slotProps.value}}</template>或<template slot-scope="{value}">{{value}}</template> 子<slot value="哈哈哈"></slot>
+    </xmp>
+</details>
+<details>
+    <summary>Vue:事件机制</summary>
+    <pre>
+        通过编译模板，解析出事件指令，将事件和事件回调附加到 vnode tree上，
+        在 patch过程中的创建阶段和更新阶段都会对这个 vnode tree进行处理，
+        拿到每个 vnode上附加的事件信息，就可以调用原生 DOM API对相应事件进行注册或移除
+    </pre>
+</details>
+<details>
+    <summary>Vue:组件间通信，父子、兄弟、跨级</summary>
+    <pre>
+        父->子：子组件props接收
+        子->父：子组件事件里 this.$emit(父组件事件，传参)
+        兄弟、跨级：用一个空的VUE实例作为中央事件总线，所有的通信都是通过中间件来达到目的
+    </pre>
+</details>
+<details>
+    <summary>Vue:双向绑定实现原理</summary>
+    <pre>
+        Object.definePrototype()监控对象的属性（可配置、可枚举、数据描述符：value|writable、存取描述符：get|set）
+    </pre>
+</details>
+<details>
+    <summary>Vue:Vue3 proxy 解决了哪些问题，优劣</summary>
+    <pre>
+        Proxy 是 ES6 中新增的功能，可以用来自定义对象中的操作
+        1）Object.defineProperty的性能开销
+        2）defineProperty只能劫持对象的属性,因此我们需要对每个对象的每个属性进行遍历,proxy能劫持一个完整的对象
+        3）能够监听添加删除属性事件
+        4）新版本将这个模块耦合到了vue里面，可以单独作为一个库来使用
+        劣：
+        1）只会关注浅层数据
+    </pre>
+</details>
+<details>
+    <summary>Webpack:优化</summary>
+    <pre>
+        图片压缩，图片合并雪碧图，图片转base64，css js编译、合并、分割、压缩，提取公共代码，Tree shake自动删除无用代码
+    </pre>
+</details>
+<details>
+    <summary>工作中做过的一些性能优化处理</summary>
+    <pre>
+        代码调优：
+            优化cpu占用率
+            时间复杂度越大，cpu执行时间越长
+            for循环递减优于递增（计算机编译出来的指令少）
+            重绘重排：
+                函数中多次用到的全局变量，保存在局部变量中：查找window下面很多属性中的一个较慢，查找原型链层次过多会慢
+                使用事件代理/事件委托：函数会占用空间
+                批量修改DOM：减少重绘重排次数，读取DOM也会导致重绘
+        加载资源调优：
+            路由懒加载：const Com = ()=>import("../a/Com")
+            组件异步加载：
+                Com:function(resolve){require(["../a/Com"],resolve)}
+                Com:()=>import("../a/Com")
+            高级异步组件：加载过程处理
+                component:import("../a/Com"),
+                loading:Loading,
+                delay:200,
+                timeout:2000,
+                error:ErrorDom,
+    </pre>
+</details>
+</body>
+</html>

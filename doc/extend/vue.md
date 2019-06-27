@@ -1,5 +1,8 @@
 ## Vue
 
+[Vue技术内幕](http://caibaojian.com/vue-design/art/)
+[Vue.js 技术揭秘](http://caibaojian.com/vue-analysis/)
+
 #### 特点
 ```
 vue2.0：Object.defineProperty()，重新定义对象get和set方法
