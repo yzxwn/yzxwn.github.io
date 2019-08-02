@@ -7,7 +7,7 @@
     "testHtml": "node test/index.html",
     "testJs": "node test/test/index.js",
     "bookIns": "gitbook install",
-    "bookBuild": "gitbook build && xcopy/Y _book /e",
+    "bookBuild": "gitbook build && cp -r ./_book/* ./",
     "bookStart": "gitbook serve"
   },
   "repository": {

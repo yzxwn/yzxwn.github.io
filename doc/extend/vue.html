@@ -517,7 +517,7 @@
                 <span>
             
                     
-                    手机端页面
+                    移动端
             
                 </span>
             
@@ -545,6 +545,32 @@
             
                     
                     h5基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../h5/rn.html">
+            
+                <a href="../h5/rn.html">
+            
+                    
+                    ReactNative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../h5/flutter.html">
+            
+                <a href="../h5/flutter.html">
+            
+                    
+                    Flutter
             
                 </a>
             
@@ -661,6 +687,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="vue">Vue</h2>
+<p><a href="http://caibaojian.com/vue-design/art/" target="_blank">Vue&#x6280;&#x672F;&#x5185;&#x5E55;</a>
+<a href="http://caibaojian.com/vue-analysis/" target="_blank">Vue.js &#x6280;&#x672F;&#x63ED;&#x79D8;</a></p>
 <h4 id="&#x7279;&#x70B9;">&#x7279;&#x70B9;</h4>
 <pre><code>vue2.0&#xFF1A;Object.defineProperty()&#xFF0C;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;get&#x548C;set&#x65B9;&#x6CD5;
 vue3.0:Proxy&#xFF0C;&#x5728;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x4E4B;&#x524D;&#x67B6;&#x8BBE;&#x4E00;&#x5C42;&#x201C;&#x62E6;&#x622A;&#x201D;&#xFF0C;&#x5916;&#x754C;&#x5BF9;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x5148;&#x901A;&#x8FC7;&#x8FD9;&#x5C42;&#x62E6;&#x622A;
@@ -702,7 +730,7 @@ var ComponentA = { /* ... */ }
 </code></pre><h4 id="&#x63D2;&#x69FD;">&#x63D2;&#x69FD;</h4>
 <pre><code>&lt;slot&gt;&lt;/slot&gt;&#xFF1A;&#x5B50;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x5165;&#x7684;&#x5185;&#x5BB9;
 &#x5177;&#x540D;&#x63D2;&#x69FD;&#xFF1A;&#x7236;&lt;template slot=&quot;header&quot;&gt;&lt;/template&gt; &#x5B50;&lt;slot name=&quot;header&quot;&gt;&lt;/slot&gt;
-&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#xFF08;&#x7236;&#x8BBF;&#x95EE;&#x5B50;&#x4F5C;&#x7528;&#x57DF;&#xFF09;&#xFF1A;&#x7236;&lt;template slot-scope=&quot;slotProps&quot;&gt;&lt;/template&gt;&#x6216;&lt;template slot-scope=&quot;{value}&quot;&gt;&lt;/template&gt; &#x5B50;&lt;slot value=&quot;&#x54C8;&#x54C8;&#x54C8;&quot;&gt;&lt;/slot&gt;
+&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#xFF08;&#x7236;&#x8BBF;&#x95EE;&#x5B50;&#x4F5C;&#x7528;&#x57DF;&#xFF09;&#xFF1A;&#x7236;&lt;template slot-scope=&quot;slotProps&quot;&gt;{{slotProps.value}}&lt;/template&gt;&#x6216;&lt;template slot-scope=&quot;{value}&quot;&gt;{{value}}&lt;/template&gt; &#x5B50;&lt;slot value=&quot;&#x54C8;&#x54C8;&#x54C8;&quot;&gt;&lt;/slot&gt;
 </code></pre><h4 id="is">is</h4>
 <pre><code>&#x7F13;&#x5B58;&#x52A8;&#x6001;&#x7EC4;&#x4EF6;
 &lt;keep-alive&gt;
@@ -848,7 +876,7 @@ directives: {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vue","level":"1.4.2","depth":2,"next":{"title":"Typescript","level":"1.4.3","depth":2,"path":"doc/extend/typescript.md","ref":"doc/extend/typescript.md","articles":[]},"previous":{"title":"React","level":"1.4.1","depth":2,"path":"doc/extend/react.md","ref":"doc/extend/react.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/extend/vue.md","mtime":"2019-06-05T10:27:59.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T10:29:06.720Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vue","level":"1.4.2","depth":2,"next":{"title":"Typescript","level":"1.4.3","depth":2,"path":"doc/extend/typescript.md","ref":"doc/extend/typescript.md","articles":[]},"previous":{"title":"React","level":"1.4.1","depth":2,"path":"doc/extend/react.md","ref":"doc/extend/react.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","changyan","back-to-top-button"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"changyan":{"appid":"your changyan's appid","conf":"the conf in the code generate by changyan"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"一只小蜗牛","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"yzxwn","gitbook":"*","description":"电子书"},"file":{"path":"doc/extend/vue.md","mtime":"2019-08-02T08:54:05.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-02T10:36:55.434Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

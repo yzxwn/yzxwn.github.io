@@ -38,7 +38,8 @@
 * 移动端
     * [h5技巧](doc/h5/h5技巧.md)
     * [h5基础](doc/h5/h5基础.md)
-    * [ReactNative](doc/rn.md)
+    * [ReactNative](doc/h5/rn.md)
+    * [Flutter](doc/h5/flutter.md)
 
 * 开发工具
     * [Git](doc/tool/Git.md)
