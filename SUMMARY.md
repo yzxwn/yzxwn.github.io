@@ -26,6 +26,7 @@
     * [Es6](doc/primary/es6.md)
     * [Json](doc/primary/Json.md)
     * [Ajax](doc/primary/Ajax.md)
+    * [jQuery](doc/primary/jquery.md)
 
 * 扩展技术
     * [React](doc/extend/react.md)
@@ -40,9 +41,16 @@
     * [h5基础](doc/h5/h5基础.md)
     * [ReactNative](doc/h5/rn.md)
     * [Flutter](doc/h5/flutter.md)
+    * [小程序](doc/h5/小程序.md)
 
 * 开发工具
     * [Git](doc/tool/Git.md)
     * [Svn](doc/tool/Svn.md)
     * [Webpack4](doc/tool/Webpack4.md)
 
+* 阅读书籍
+    * [HTTPS原理](doc/book/HTTPS原理.md)
+    * [互联网运营](doc/book/互联网运营.md)
+    * [程序员](doc/book/程序员.md)
+    * [设计模式](doc/book/设计模式.md)
+    * [产品经理](doc/book/产品经理.md)
